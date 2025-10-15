@@ -28,8 +28,8 @@ public class CsvTransactionMapper {
   private final Map<String, DateTimeFormatter> dateFormatterMap;
 
   static {
-    add(com.bleurubin.budgetanalyzer.domain.TransactionType.CREDIT, "credit", "deposit");
-    add(com.bleurubin.budgetanalyzer.domain.TransactionType.DEBIT, "debit", "withdrawal");
+    add(TransactionType.CREDIT, "credit", "deposit");
+    add(TransactionType.DEBIT, "debit", "withdrawal");
   }
 
   private static void add(TransactionType type, String... aliases) {

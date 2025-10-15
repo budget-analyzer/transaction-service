@@ -1,6 +1,5 @@
 package com.bleurubin.budgetanalyzer.api;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -11,7 +10,6 @@ import java.util.List;
  * The type field isn't a URI contrary to the specification as that doesn't
  * seem practical.
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @Schema(description = "Standard API error response format (RFC 7807-inspired)")
 public class ApiErrorResponse {
 
@@ -40,7 +38,7 @@ public class ApiErrorResponse {
   private String detail;
 
   @Schema(
-      description = "Request path or trace ID",
+      description = "Request path or trace Id",
       requiredMode = Schema.RequiredMode.REQUIRED,
       example = "/transactions/123")
   private String instance;
@@ -137,7 +135,6 @@ public class ApiErrorResponse {
     }
   }
 
-  @JsonInclude(JsonInclude.Include.NON_NULL)
   @Schema(description = "Field-level validation error details")
   public static class FieldError {
     @Schema(
