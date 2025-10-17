@@ -1,5 +1,6 @@
 package com.bleurubin.budgetanalyzer.api;
 
+import com.bleurubin.budgetanalyzer.api.response.ApiErrorResponse;
 import java.time.Instant;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
