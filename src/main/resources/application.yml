@@ -64,7 +64,7 @@ budget-analyzer:
       credit-header: "Credit"
       date-header: "Date"
       date-format: "d MMM uuuu HH:mm"
-      debit-header:  "Withdrawal"
+      debit-header:  "Debit"
       description-header: "Description"
     bkk-bank-statement:
       bank-name: "Bangkok Bank"
