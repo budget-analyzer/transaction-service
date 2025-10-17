@@ -5,8 +5,8 @@ import com.bleurubin.budgetanalyzer.domain.CsvData;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.service.CsvParser;
 import com.bleurubin.budgetanalyzer.service.CsvService;
-import com.bleurubin.budgetanalyzer.service.CsvTransactionMapper;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
+import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import java.io.IOException;
 import java.util.List;
 import org.slf4j.Logger;
@@ -31,6 +31,8 @@ public class CsvServiceImpl implements CsvService {
     this.csvParser = csvParser;
     this.transactionService = transactionService;
     this.transactionMapper = new CsvTransactionMapper(appProperties.csvConfigMap());
+
+    log.info("Initializing application configuration: {}", JsonUtils.toJson(appProperties));
   }
 
   @Override

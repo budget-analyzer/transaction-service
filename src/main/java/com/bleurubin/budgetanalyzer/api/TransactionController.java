@@ -5,6 +5,7 @@ import com.bleurubin.budgetanalyzer.api.response.ApiErrorResponse;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.service.CsvService;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
+import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import com.bleurubin.budgetanalyzer.util.TransactionUtils;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -88,7 +89,7 @@ public class TransactionController {
         file.getOriginalFilename());
 
     if (file.isEmpty()) {
-      log.warn("File is empty");
+      log.warn("File {} is empty", file.getOriginalFilename());
       throw new IllegalArgumentException("File is empty");
     }
 
@@ -113,7 +114,7 @@ public class TransactionController {
       })
   @PostMapping(path = "/search", consumes = "application/json", produces = "application/json")
   public List<Transaction> searchTransactions(@RequestBody @Valid TransactionFilter filter) {
-    log.trace("Received search request filter: {}", filter);
+    log.info("Received search request filter: {}", JsonUtils.toJson(filter));
     return transactionService.search(filter);
   }
 
@@ -132,7 +133,8 @@ public class TransactionController {
       })
   @GetMapping(path = "/summary", produces = "application/json")
   public Map<String, BigDecimal> getTransactionSummary() {
-    log.trace("Received summary request");
+    log.info("Received summary request");
+
     var transactions =
         transactionService.search(
             new TransactionFilter(

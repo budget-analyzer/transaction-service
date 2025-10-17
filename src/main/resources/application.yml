@@ -66,6 +66,14 @@ budget-analyzer:
       date-format: "d MMM uuuu HH:mm"
       debit-header:  "Debit"
       description-header: "Description"
+    bkk-bank-statement:
+      bank-name: "Bangkok Bank"
+      default-currency-iso-code: "THB"
+      credit-header: "Deposit"
+      date-header: "Date"
+      date-format: "dd/MM/yy"
+      debit-header: "Withdrawal"
+      description-header: "Particulars"
     truist:
       bank-name: "Truist"
       default-currency-iso-code: "USD"
