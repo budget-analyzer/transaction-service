@@ -1,8 +1,9 @@
-package com.bleurubin.budgetanalyzer.service;
+package com.bleurubin.budgetanalyzer.service.impl;
 
 import com.bleurubin.budgetanalyzer.config.CsvConfig;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.domain.TransactionType;
+import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -53,7 +54,7 @@ public class CsvTransactionMapper {
 
   public Transaction map(String format, String accountId, Map<String, String> csvRow) {
     var csvConfig = csvConfigMap.get(format);
-    log.debug("Processing row: {}", csvRow);
+    log.debug("Processing row: {}", JsonUtils.toJson(csvRow));
 
     if (csvConfig == null) {
       throw new IllegalArgumentException("No csvConfig found for bank " + format);
@@ -180,7 +181,7 @@ public class CsvTransactionMapper {
 
   private DateTimeFormatter buildDateFormatter(String dateFormat) {
     return DateTimeFormatter.ofPattern(dateFormat, Locale.ROOT)
-        .withResolverStyle(ResolverStyle.STRICT);
+        .withResolverStyle(ResolverStyle.SMART);
   }
 
   private String sanitizeNumberField(String val) {
