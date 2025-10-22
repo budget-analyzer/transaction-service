@@ -35,7 +35,7 @@ import org.springframework.http.HttpStatus;
     externalDocs =
         @ExternalDocumentation(
             description = "Find more info here",
-            url = "https://github.com/bleurubin/budget-analyzer"))
+            url = "https://github.com/bleurubin/budget-analyzer-api"))
 public class OpenApiConfig {
 
   @Bean
