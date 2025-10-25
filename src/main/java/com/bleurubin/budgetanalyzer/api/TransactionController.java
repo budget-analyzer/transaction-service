@@ -19,6 +19,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -49,8 +50,9 @@ public class TransactionController {
   }
 
   @Operation(
-      summary = "Upload a CSV file containing transactions",
-      description = "Imports transactions from a CSV file for a given account and format.")
+      summary = "Upload CSV file(s) containing transactions",
+      description =
+          "Imports transactions from one or more CSV files for a given account and format.")
   @ApiResponses(
       value = {
         @ApiResponse(
@@ -80,26 +82,24 @@ public class TransactionController {
               example = "checking-12345")
           @RequestParam(name = "accountId", required = false)
           Optional<String> accountId,
-      @Parameter(description = "CSV file to upload", required = true) @NotNull @RequestParam("file")
-          MultipartFile file)
+      @Parameter(description = "CSV file(s) to upload", required = true)
+          @NotNull
+          @RequestParam("files")
+          List<MultipartFile> files)
       throws IOException {
-    log.trace(
-        "Received uploadCSVFile request format: {} accountId: {} fileName: {}",
+    log.info(
+        "Received uploadCSVFile request format: {} accountId: {} fileCount: {} fileNames: {}",
         format,
         accountId.orElse(null),
-        file.getOriginalFilename());
+        files.size(),
+        files.stream().map(MultipartFile::getOriginalFilename).collect(Collectors.joining(", ")));
 
-    if (file.isEmpty()) {
-      log.warn("File {} is empty", file.getOriginalFilename());
-      throw new IllegalArgumentException("File is empty");
+    if (files.isEmpty()) {
+      log.warn("No files provided");
+      throw new IllegalArgumentException("No files provided");
     }
 
-    try {
-      return csvService.importCsvFile(format, accountId.orElse(null), file);
-    } catch (IOException e) {
-      log.warn("Error uploading file: {}", e.getMessage());
-      throw e;
-    }
+    return csvService.importCsvFiles(format, accountId.orElse(null), files);
   }
 
   @Operation(summary = "Get transaction", description = "Get transaction by id")
