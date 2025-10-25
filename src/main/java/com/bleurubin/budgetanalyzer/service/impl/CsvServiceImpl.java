@@ -8,6 +8,7 @@ import com.bleurubin.budgetanalyzer.service.CsvService;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
 import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,12 +38,27 @@ public class CsvServiceImpl implements CsvService {
 
   @Override
   @Transactional(rollbackFor = IOException.class)
-  public List<Transaction> importCsvFile(String format, String accountId, MultipartFile file)
-      throws IOException {
-    log.trace("Importing csv file format: {} for file: {}", format, file.getOriginalFilename());
+  public List<Transaction> importCsvFiles(
+      String format, String accountId, List<MultipartFile> files) throws IOException {
+    var importedTransactions = new ArrayList<Transaction>();
+    for (MultipartFile file : files) {
+      if (file.isEmpty()) {
+        log.warn("File {} is empty, skipping", file.getOriginalFilename());
+        continue;
+      }
 
-    var csvData = csvParser.parseCsvFile(file);
-    return createTransactions(format, accountId, csvData);
+      log.info("Importing csv file format: {} for file: {}", format, file.getOriginalFilename());
+
+      var csvData = csvParser.parseCsvFile(file);
+      importedTransactions.addAll(createTransactions(format, accountId, csvData));
+    }
+
+    log.info(
+        "Successfully imported {} total transactions from {} files",
+        importedTransactions.size(),
+        files.size());
+
+    return importedTransactions;
   }
 
   private List<Transaction> createTransactions(String format, String accountId, CsvData csvData) {
