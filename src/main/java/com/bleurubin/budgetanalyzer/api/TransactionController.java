@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-@Tag(name = "Transactions", description = "Endpoints for operations on transactions")
+@Tag(name = "Transactions", description = "Import and manipulate transactions")
 @RestController
 @RequestMapping(path = "/transactions")
 public class TransactionController {
