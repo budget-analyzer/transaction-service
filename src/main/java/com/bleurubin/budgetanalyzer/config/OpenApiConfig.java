@@ -25,7 +25,7 @@ import org.springframework.http.HttpStatus;
         @Info(
             title = "Budget Analyzer Service",
             version = "1.0",
-            description = "API documentation for Budget Analyzer resources",
+            description = "API documentation for Budget Analyzer Service resources",
             contact = @Contact(name = "Bleu Rubin", email = "support@bleurubin.com"),
             license = @License(name = "MIT", url = "https://opensource.org/licenses/MIT")),
     servers = {

@@ -47,6 +47,8 @@ budget-analyzer:
   #  configuration represents the configuration for a specific
   #  csv version from a specific bank.  If a bank changes the version,
   #  create an entry like capital-one-v2 and make the changes.
+  #
+  #  In the future this could be stored and configured in the db.
   # ==================================================================
   csv-config-map:
     capital-one:
