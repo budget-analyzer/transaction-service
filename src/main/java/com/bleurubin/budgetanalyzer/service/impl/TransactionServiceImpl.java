@@ -12,6 +12,7 @@ import com.bleurubin.budgetanalyzer.repository.TransactionRepository;
 import com.bleurubin.budgetanalyzer.repository.spec.TransactionSpecifications;
 import com.bleurubin.budgetanalyzer.service.SoftDeleteOperations;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
+import com.bleurubin.service.exception.ResourceNotFoundException;
 
 @Service
 public class TransactionServiceImpl
@@ -43,7 +44,7 @@ public class TransactionServiceImpl
   @Override
   public Transaction getTransaction(Long id) {
     return findById(id)
-        .orElseThrow(() -> new RuntimeException("Transaction not found with id: " + id));
+        .orElseThrow(() -> new ResourceNotFoundException("Transaction not found with id: " + id));
   }
 
   @Override

@@ -9,7 +9,6 @@ import java.time.temporal.TemporalAccessor;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -18,7 +17,9 @@ import org.slf4j.LoggerFactory;
 import com.bleurubin.budgetanalyzer.config.CsvConfig;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.domain.TransactionType;
+import com.bleurubin.budgetanalyzer.service.BudgetAnalyzerServiceError;
 import com.bleurubin.budgetanalyzer.util.JsonUtils;
+import com.bleurubin.service.exception.BusinessException;
 
 public class CsvTransactionMapper {
 
@@ -52,12 +53,15 @@ public class CsvTransactionMapper {
     }
   }
 
-  public Transaction map(String format, String accountId, Map<String, String> csvRow) {
+  public Transaction map(
+      String fileName, String format, String accountId, Map<String, String> csvRow) {
     var csvConfig = csvConfigMap.get(format);
-    log.debug("Processing row: {}", JsonUtils.toJson(csvRow));
+    log.debug("Processing file: {} row: {}", fileName, JsonUtils.toJson(csvRow));
 
     if (csvConfig == null) {
-      throw new IllegalArgumentException("No csvConfig found for bank " + format);
+      throw new BusinessException(
+          "No csvConfig found for format: " + format,
+          BudgetAnalyzerServiceError.CSV_FORMAT_NOT_SUPPORTED.name());
     }
 
     var rv = new Transaction();
@@ -70,19 +74,11 @@ public class CsvTransactionMapper {
     var typeHeader = csvConfig.typeHeader();
     var amountHeader = csvConfig.debitHeader();
     /*
-     * Some csv files show a single amount column and a type column to indicate
-     * DEBIT or CREDIT,
-     * others have separate columns for each and the type is implicit.
+     * Some csv files show a single amount column and a type column to indicate DEBIT
+     *  or CREDIT, others have separate columns for each and the type is implicit.
      */
     if (typeHeader != null) {
-      var rawType = csvRow.get(typeHeader);
-      if (rawType == null) {
-        // FIXME- create a parsing exception
-        throw new IllegalArgumentException(
-            "No value found for column " + typeHeader + " in file for format: " + format);
-      }
-
-      var type = parseTransactionType(rawType);
+      var type = parseTransactionType(fileName, format, typeHeader, csvRow);
       rv.setType(type);
 
       if (type == TransactionType.CREDIT) {
@@ -105,15 +101,7 @@ public class CsvTransactionMapper {
     var realAmount = new BigDecimal(amountSanitized);
     rv.setAmount(realAmount);
 
-    var dateHeader = csvConfig.dateHeader();
-    var rawDate = csvRow.get(dateHeader);
-    if (rawDate == null) {
-      // FIXME- create a parsing exception
-      throw new IllegalArgumentException(
-          "No value found for column " + dateHeader + " in file for format: " + format);
-    }
-
-    var date = parseDate(rawDate, csvConfig.dateFormat());
+    var date = parseDate(csvConfig, fileName, format, csvRow);
     rv.setDate(date);
 
     var descriptionHeader = csvConfig.descriptionHeader();
@@ -126,12 +114,34 @@ public class CsvTransactionMapper {
    * It wouldn't be practical to put this higher in the call chain
    * for user input validation since these are multiple rows in a file.
    */
-  private TransactionType parseTransactionType(String val) {
-    Objects.requireNonNull(val, "Type must not be null");
+  private TransactionType parseTransactionType(
+      String fileName, String format, String typeHeader, Map<String, String> csvRow) {
+    var rawType = csvRow.get(typeHeader);
+    if (rawType == null) {
+      throw new BusinessException(
+          "No value found for column: "
+              + typeHeader
+              + " in file: "
+              + fileName
+              + " for format: "
+              + format
+              + " row: "
+              + csvRow,
+          BudgetAnalyzerServiceError.CSV_FILE_INCORRECTLY_FORMATTED.name());
+    }
 
-    var rv = transactionTypeMap.get(val.trim().toLowerCase(Locale.ROOT));
+    var rv = transactionTypeMap.get(rawType.trim().toLowerCase(Locale.ROOT));
     if (rv == null) {
-      throw new IllegalArgumentException("Unknown transaction type: " + val);
+      throw new BusinessException(
+          "Unknown transaction type: "
+              + rawType
+              + " in file: "
+              + fileName
+              + " for format: "
+              + format
+              + " row: "
+              + csvRow,
+          BudgetAnalyzerServiceError.CSV_FILE_INVALID_VALUE.name());
     }
 
     return rv;
@@ -142,10 +152,24 @@ public class CsvTransactionMapper {
    * the time fields from the rawDate input.  If that succeeds, lazily cache the
    * date only pattern
    */
-  private LocalDate parseDate(String rawDate, String dateFormat) {
-    Objects.requireNonNull(rawDate, "rawDate must not be null");
-    Objects.requireNonNull(dateFormat, "dateFormat must not be null");
+  private LocalDate parseDate(
+      CsvConfig csvConfig, String fileName, String format, Map<String, String> csvRow) {
+    var dateHeader = csvConfig.dateHeader();
+    var rawDate = csvRow.get(dateHeader);
+    if (rawDate == null) {
+      throw new BusinessException(
+          "No value found for column: "
+              + dateHeader
+              + " in file: "
+              + fileName
+              + " for format: "
+              + format
+              + " row: "
+              + csvRow,
+          BudgetAnalyzerServiceError.CSV_FILE_INCORRECTLY_FORMATTED.name());
+    }
 
+    var dateFormat = csvConfig.dateFormat();
     var formatter = dateFormatterMap.get(dateFormat);
     TemporalAccessor accessor = null;
 
