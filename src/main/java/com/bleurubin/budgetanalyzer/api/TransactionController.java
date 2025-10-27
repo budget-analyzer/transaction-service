@@ -1,6 +1,5 @@
 package com.bleurubin.budgetanalyzer.api;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -37,6 +36,7 @@ import com.bleurubin.budgetanalyzer.service.CsvService;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
 import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import com.bleurubin.service.api.ApiErrorResponse;
+import com.bleurubin.service.exception.InvalidRequestException;
 
 @Tag(name = "Transactions", description = "Import and manipulate transactions")
 @RestController
@@ -89,8 +89,7 @@ public class TransactionController {
       @Parameter(description = "CSV file(s) to upload", required = true)
           @NotNull
           @RequestParam("files")
-          List<MultipartFile> files)
-      throws IOException {
+          List<MultipartFile> files) {
     log.info(
         "Received importTransactions request format: {} accountId: {} fileCount: {} fileNames: {}",
         format,
@@ -100,7 +99,7 @@ public class TransactionController {
 
     if (files.isEmpty()) {
       log.warn("No files provided");
-      throw new IllegalArgumentException("No files provided");
+      throw new InvalidRequestException("No files provided");
     }
 
     return csvService.importCsvFiles(format, accountId.orElse(null), files);

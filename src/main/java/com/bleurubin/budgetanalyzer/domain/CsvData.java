@@ -1,20 +1,12 @@
 package com.bleurubin.budgetanalyzer.domain;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class CsvData {
-
-  private List<Map<String, String>> rows = new ArrayList<>();
-
-  public CsvData() {}
-
-  public List<Map<String, String>> getRows() {
-    return rows;
-  }
-
-  public void setRows(List<Map<String, String>> rows) {
-    this.rows = rows;
+public record CsvData(String fileName, List<Map<String, String>> rows) {
+  public CsvData {
+    if (rows == null) {
+      rows = List.of();
+    }
   }
 }

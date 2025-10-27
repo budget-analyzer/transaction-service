@@ -30,14 +30,14 @@ public class CsvParserImpl implements CsvParser {
 
       if (allRows.isEmpty()) {
         log.info("Ignoring empty csv file: {}", file.getOriginalFilename());
-        return new CsvData();
+        return new CsvData(file.getOriginalFilename(), null);
       }
 
-      return buildRowMap(allRows);
+      return buildRowMap(file.getOriginalFilename(), allRows);
     }
   }
 
-  private CsvData buildRowMap(List<String[]> allRows) {
+  private CsvData buildRowMap(String fileName, List<String[]> allRows) {
     var headers = Arrays.stream(allRows.getFirst()).map(String::trim).toList();
     var rows = allRows.subList(1, allRows.size());
     var mappedRows = new ArrayList<Map<String, String>>();
@@ -56,9 +56,6 @@ public class CsvParserImpl implements CsvParser {
       mappedRows.add(rowMap);
     }
 
-    var rv = new CsvData();
-    rv.setRows(mappedRows);
-
-    return rv;
+    return new CsvData(fileName, mappedRows);
   }
 }
