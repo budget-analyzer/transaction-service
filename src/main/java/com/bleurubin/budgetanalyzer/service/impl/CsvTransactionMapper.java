@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
-import java.time.temporal.TemporalAccessor;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -15,19 +14,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.bleurubin.budgetanalyzer.config.CsvConfig;
+import com.bleurubin.budgetanalyzer.domain.CsvRow;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.domain.TransactionType;
-import com.bleurubin.budgetanalyzer.service.BudgetAnalyzerServiceError;
+import com.bleurubin.budgetanalyzer.service.BudgetAnalyzerError;
 import com.bleurubin.budgetanalyzer.util.JsonUtils;
 import com.bleurubin.service.exception.BusinessException;
 
 public class CsvTransactionMapper {
 
-  private static final Map<String, TransactionType> transactionTypeMap = new HashMap<>();
+  private static final Map<String, TransactionType> TRANSACTION_TYPE_MAP =
+      initializeTransactionTypeMap();
 
-  static {
-    add(TransactionType.CREDIT, "credit", "deposit");
-    add(TransactionType.DEBIT, "debit", "withdrawal");
+  private static Map<String, TransactionType> initializeTransactionTypeMap() {
+    var rv = new HashMap<String, TransactionType>();
+    addTransactionType(rv, TransactionType.CREDIT, "credit", "deposit");
+    addTransactionType(rv, TransactionType.DEBIT, "debit", "withdrawal");
+
+    return Map.copyOf(rv); // Make it immutable
   }
 
   private final Logger log = LoggerFactory.getLogger(this.getClass());
@@ -47,104 +51,95 @@ public class CsvTransactionMapper {
                     (existing, replacement) -> existing));
   }
 
-  private static void add(TransactionType type, String... aliases) {
+  private static void addTransactionType(
+      Map<String, TransactionType> map, TransactionType type, String... aliases) {
     for (String alias : aliases) {
-      transactionTypeMap.put(alias.toLowerCase(Locale.ROOT), type);
+      map.put(alias.toLowerCase(Locale.ROOT), type);
     }
   }
 
-  public Transaction map(
-      String fileName, String format, String accountId, Map<String, String> csvRow) {
-    var csvConfig = csvConfigMap.get(format);
-    log.debug("Processing file: {} row: {}", fileName, JsonUtils.toJson(csvRow));
+  public Transaction map(String fileName, String format, String accountId, CsvRow csvRow) {
+    var csvConfig = getConfig(format);
+    var fileContext = new CsvFileContext(fileName, format, csvRow);
+    log.debug("Processing fileContext: {}", JsonUtils.toJson(fileContext));
 
-    if (csvConfig == null) {
-      throw new BusinessException(
-          "No csvConfig found for format: " + format,
-          BudgetAnalyzerServiceError.CSV_FORMAT_NOT_SUPPORTED.name());
-    }
+    var rv = buildTransaction(csvConfig, fileContext, accountId);
+    mapTypeAndAmount(rv, csvConfig, fileContext);
 
+    return rv;
+  }
+
+  private Transaction buildTransaction(
+      CsvConfig csvConfig, CsvFileContext fileContext, String accountId) {
     var rv = new Transaction();
     rv.setAccountId(accountId);
     rv.setBankName(csvConfig.bankName());
+    rv.setDescription(getRequiredValue(fileContext, csvConfig.descriptionHeader()));
+    rv.setDate(parseDate(csvConfig, fileContext));
+
     // if we need to support multiple currencies for a given bank we can pass
     // it through with accountId. just use the default for now
     rv.setCurrencyIsoCode(csvConfig.defaultCurrencyIsoCode());
-
-    var typeHeader = csvConfig.typeHeader();
-    var amountHeader = csvConfig.debitHeader();
-    /*
-     * Some csv files show a single amount column and a type column to indicate DEBIT
-     *  or CREDIT, others have separate columns for each and the type is implicit.
-     */
-    if (typeHeader != null) {
-      var type = parseTransactionType(fileName, format, typeHeader, csvRow);
-      rv.setType(type);
-
-      if (type == TransactionType.CREDIT) {
-        amountHeader = csvConfig.creditHeader();
-      }
-    } else {
-      // handle debit/credit as separate columns
-      var type = TransactionType.DEBIT;
-      var rawAmount = csvRow.get(amountHeader);
-
-      if (rawAmount == null || rawAmount.isBlank()) {
-        type = TransactionType.CREDIT;
-        amountHeader = csvConfig.creditHeader();
-      }
-
-      rv.setType(type);
-    }
-
-    var amountSanitized = sanitizeNumberField(csvRow.get(amountHeader));
-    var realAmount = new BigDecimal(amountSanitized);
-    rv.setAmount(realAmount);
-
-    var date = parseDate(csvConfig, fileName, format, csvRow);
-    rv.setDate(date);
-
-    var descriptionHeader = csvConfig.descriptionHeader();
-    rv.setDescription(csvRow.get(descriptionHeader));
 
     return rv;
   }
 
   /*
-   * It wouldn't be practical to put this higher in the call chain
-   * for user input validation since these are multiple rows in a file.
+   * Some csv files show a single amount column and a type column to indicate DEBIT
+   * or CREDIT, others have separate columns for each and the type is implicit.
    */
-  private TransactionType parseTransactionType(
-      String fileName, String format, String typeHeader, Map<String, String> csvRow) {
-    var rawType = csvRow.get(typeHeader);
-    if (rawType == null) {
-      throw new BusinessException(
-          "No value found for column: "
-              + typeHeader
-              + " in file: "
-              + fileName
-              + " for format: "
-              + format
-              + " row: "
-              + csvRow,
-          BudgetAnalyzerServiceError.CSV_FILE_INCORRECTLY_FORMATTED.name());
+  private void mapTypeAndAmount(
+      Transaction transaction, CsvConfig csvConfig, CsvFileContext fileContext) {
+    if (csvConfig.typeHeader() != null) {
+      handleTypeFromColumn(transaction, csvConfig, fileContext);
+    } else {
+      handleImplicitType(transaction, csvConfig, fileContext);
+    }
+  }
+
+  // There is an explicit type column with values like 'Debit' 'Credit'
+  private void handleTypeFromColumn(
+      Transaction transaction, CsvConfig csvConfig, CsvFileContext fileContext) {
+    var row = fileContext.rowMap();
+    var type = parseTransactionType(csvConfig, fileContext);
+    transaction.setType(type);
+
+    var columnName =
+        (type == TransactionType.CREDIT) ? csvConfig.creditHeader() : csvConfig.debitHeader();
+    transaction.setAmount(parseAmount(row.get(columnName)));
+  }
+
+  // There is no explicit type column, we get the type by determining which
+  // column (i.e. 'Debit' or 'Credit') is populated
+  private void handleImplicitType(
+      Transaction transaction, CsvConfig csvConfig, CsvFileContext fileContext) {
+    var row = fileContext.rowMap();
+    var debitVal = row.get(csvConfig.debitHeader());
+    var creditVal = row.get(csvConfig.creditHeader());
+
+    TransactionType type;
+    String amountColumnName;
+
+    if (isBlank(debitVal) && !isBlank(creditVal)) {
+      type = TransactionType.CREDIT;
+      amountColumnName = csvConfig.creditHeader();
+    } else {
+      type = TransactionType.DEBIT;
+      amountColumnName = csvConfig.debitHeader();
     }
 
-    var rv = transactionTypeMap.get(rawType.trim().toLowerCase(Locale.ROOT));
-    if (rv == null) {
+    transaction.setType(type);
+    transaction.setAmount(parseAmount(row.get(amountColumnName)));
+  }
+
+  private BigDecimal parseAmount(String raw) {
+    if (isBlank(raw)) {
       throw new BusinessException(
-          "Unknown transaction type: "
-              + rawType
-              + " in file: "
-              + fileName
-              + " for format: "
-              + format
-              + " row: "
-              + csvRow,
-          BudgetAnalyzerServiceError.CSV_FILE_INVALID_VALUE.name());
+          "Missing transaction amount value", BudgetAnalyzerError.CSV_PARSING_ERROR.name());
     }
 
-    return rv;
+    var cleaned = raw.replaceAll("[^\\d.-]", "");
+    return new BigDecimal(cleaned);
   }
 
   /*
@@ -152,35 +147,21 @@ public class CsvTransactionMapper {
    * the time fields from the rawDate input.  If that succeeds, lazily cache the
    * date only pattern
    */
-  private LocalDate parseDate(
-      CsvConfig csvConfig, String fileName, String format, Map<String, String> csvRow) {
-    var dateHeader = csvConfig.dateHeader();
-    var rawDate = csvRow.get(dateHeader);
-    if (rawDate == null) {
-      throw new BusinessException(
-          "No value found for column: "
-              + dateHeader
-              + " in file: "
-              + fileName
-              + " for format: "
-              + format
-              + " row: "
-              + csvRow,
-          BudgetAnalyzerServiceError.CSV_FILE_INCORRECTLY_FORMATTED.name());
-    }
-
+  private LocalDate parseDate(CsvConfig csvConfig, CsvFileContext fileContext) {
+    var rawDate = getRequiredValue(fileContext, csvConfig.dateHeader());
     var dateFormat = csvConfig.dateFormat();
     var formatter = dateFormatterMap.get(dateFormat);
-    TemporalAccessor accessor = null;
 
     try {
-      accessor = formatter.parse(rawDate);
+      return LocalDate.from(formatter.parse(rawDate));
     } catch (DateTimeParseException e) {
-      var simpleFormatter = getSimpleFormatter(dateFormat);
-      accessor = simpleFormatter.parse(rawDate);
+      return parseWithSimplifiedFormat(dateFormat, rawDate);
     }
+  }
 
-    return LocalDate.from(accessor);
+  private LocalDate parseWithSimplifiedFormat(String dateFormat, String rawDate) {
+    var simpleFormatter = getSimpleFormatter(dateFormat);
+    return LocalDate.from(simpleFormatter.parse(rawDate));
   }
 
   /*
@@ -189,12 +170,10 @@ public class CsvTransactionMapper {
    * the transaction.
    */
   private DateTimeFormatter getSimpleFormatter(String dateFormat) {
-    var simplifiedPattern =
-        dateFormat
-            .replaceAll("\\s*HH(:mm(:ss)?)?", "") // remove HH:mm or HH:mm:ss
-            .trim();
-
+    // remove HH:mm or HH:mm:ss
+    var simplifiedPattern = dateFormat.replaceAll("\\s*HH(:mm(:ss)?)?", "").trim();
     var simpleFormatter = dateFormatterMap.get(simplifiedPattern);
+
     if (simpleFormatter == null) {
       simpleFormatter = buildDateFormatter(simplifiedPattern);
       dateFormatterMap.put(simplifiedPattern, simpleFormatter);
@@ -208,7 +187,57 @@ public class CsvTransactionMapper {
         .withResolverStyle(ResolverStyle.SMART);
   }
 
-  private String sanitizeNumberField(String val) {
-    return val.replaceAll("[$,]", "");
+  private TransactionType parseTransactionType(CsvConfig csvConfig, CsvFileContext fileContext) {
+    var rawType = getRequiredValue(fileContext, csvConfig.typeHeader());
+    var type = TRANSACTION_TYPE_MAP.get(rawType.trim().toLowerCase(Locale.ROOT));
+
+    if (type == null) {
+      throw new BusinessException(
+          String.format(
+              "Invalid value for required column '%s' at line %d in file '%s'",
+              csvConfig.typeHeader(), fileContext.lineNumber(), fileContext.fileName()),
+          BudgetAnalyzerError.CSV_PARSING_ERROR.name());
+    }
+
+    return type;
+  }
+
+  private String getRequiredValue(CsvFileContext fileContext, String columnName) {
+    var val = fileContext.rowMap().get(columnName);
+
+    if (isBlank(val)) {
+      throw new BusinessException(
+          String.format(
+              "Missing value for required column '%s' at line %d in file '%s'",
+              columnName, fileContext.lineNumber(), fileContext.fileName()),
+          BudgetAnalyzerError.CSV_PARSING_ERROR.name());
+    }
+
+    return val;
+  }
+
+  private CsvConfig getConfig(String format) {
+    var rv = csvConfigMap.get(format);
+    if (rv == null) {
+      throw new BusinessException(
+          "No csvConfig found for format: " + format,
+          BudgetAnalyzerError.CSV_FORMAT_NOT_SUPPORTED.name());
+    }
+
+    return rv;
+  }
+
+  private boolean isBlank(String s) {
+    return s == null || s.isBlank();
+  }
+
+  private record CsvFileContext(String fileName, String format, CsvRow csvRow) {
+    int lineNumber() {
+      return csvRow.lineNumber();
+    }
+
+    Map<String, String> rowMap() {
+      return csvRow.values();
+    }
   }
 }

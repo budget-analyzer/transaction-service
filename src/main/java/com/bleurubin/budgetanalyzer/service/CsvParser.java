@@ -8,5 +8,5 @@ import com.bleurubin.budgetanalyzer.domain.CsvData;
 
 public interface CsvParser {
 
-  CsvData parseCsvFile(MultipartFile file) throws IOException;
+  CsvData parseCsvFile(MultipartFile file, String format) throws IOException;
 }
