@@ -25,6 +25,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -61,19 +62,29 @@ public class TransactionController {
       value = {
         @ApiResponse(
             responseCode = "200",
-            description = "Transactions imported successfully",
             content =
                 @Content(
                     mediaType = "application/json",
                     array = @ArraySchema(schema = @Schema(implementation = Transaction.class)))),
         @ApiResponse(
             responseCode = "422",
-            description =
-                "Request was correctly formatted but there were business rules violated by the request so it couldn't be processed",
             content =
                 @Content(
                     mediaType = "application/json",
-                    schema = @Schema(implementation = ApiErrorResponse.class)))
+                    schema = @Schema(implementation = ApiErrorResponse.class),
+                    examples = {
+                      @ExampleObject(
+                          name = "CSV Parsing Error",
+                          summary = "Missing required column",
+                          value =
+                              """
+                    {
+                      "type": "APPLICATION_ERROR",
+                      "message": "Missing value for required column 'Transaction Description' at line 1 in file 'bkk-bank-2025.csv'",
+                      "code": "CSV_PARSING_ERROR"
+                    }
+                    """)
+                    }))
       })
   @PostMapping(path = "/import", consumes = "multipart/form-data", produces = "application/json")
   public List<Transaction> importTransactions(
@@ -105,41 +116,11 @@ public class TransactionController {
     return csvService.importCsvFiles(format, accountId.orElse(null), files);
   }
 
-  @Operation(summary = "Get transaction", description = "Get transaction by id")
-  @ApiResponses(
-      value = {
-        @ApiResponse(
-            responseCode = "200",
-            description = "Transaction found",
-            content =
-                @Content(
-                    mediaType = "application/json",
-                    schema = @Schema(implementation = Transaction.class))),
-      })
-  @GetMapping(path = "/{id}", produces = "application/json")
-  public Transaction getTransaction(@PathVariable("id") Long id) {
-    log.info("Received get transaction request id: {}", id);
-    return transactionService.getTransaction(id);
-  }
-
-  @Operation(summary = "Delete transaction", description = "Delete transaction by id")
-  @ApiResponses(
-      value = {
-        @ApiResponse(responseCode = "204", description = "Transaction deleted successfully")
-      })
-  @DeleteMapping(path = "/{id}")
-  @ResponseStatus(HttpStatus.NO_CONTENT)
-  public void deleteTransaction(@PathVariable("id") Long id) {
-    log.info("Received delete transaction request id: {}", id);
-    transactionService.deleteTransaction(id);
-  }
-
   @Operation(summary = "Get transactions", description = "Get all transactions")
   @ApiResponses(
       value = {
         @ApiResponse(
             responseCode = "200",
-            description = "List of transactions",
             content =
                 @Content(
                     mediaType = "application/json",
@@ -153,12 +134,36 @@ public class TransactionController {
             null, null, null, null, null, null, null, null, null, null, null, null, null, null));
   }
 
+  @Operation(summary = "Get transaction", description = "Get transaction by id")
+  @ApiResponses(
+      value = {
+        @ApiResponse(
+            responseCode = "200",
+            content =
+                @Content(
+                    mediaType = "application/json",
+                    schema = @Schema(implementation = Transaction.class))),
+      })
+  @GetMapping(path = "/{id}", produces = "application/json")
+  public Transaction getTransaction(@PathVariable("id") Long id) {
+    log.info("Received get transaction request id: {}", id);
+    return transactionService.getTransaction(id);
+  }
+
+  @Operation(summary = "Delete transaction", description = "Delete transaction by id")
+  @ApiResponses(value = {@ApiResponse(responseCode = "204")})
+  @DeleteMapping(path = "/{id}")
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void deleteTransaction(@PathVariable("id") Long id) {
+    log.info("Received delete transaction request id: {}", id);
+    transactionService.deleteTransaction(id);
+  }
+
   @Operation(summary = "Search transactions", description = "Paginated search over transactions")
   @ApiResponses(
       value = {
         @ApiResponse(
             responseCode = "200",
-            description = "Search completed without errors",
             content =
                 @Content(
                     mediaType = "application/json",
