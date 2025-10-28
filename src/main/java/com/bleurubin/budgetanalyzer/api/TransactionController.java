@@ -155,12 +155,9 @@ public class TransactionController {
   @ApiResponses(value = {@ApiResponse(responseCode = "204")})
   @DeleteMapping(path = "/{id}")
   @ResponseStatus(HttpStatus.NO_CONTENT)
-  public ResponseEntity<Void> deleteTransaction(@PathVariable("id") Long id) {
+  public void deleteTransaction(@PathVariable("id") Long id) {
     log.info("Received delete transaction request id: {}", id);
     transactionService.deleteTransaction(id);
-
-    // this is needed to get SpringDoc to correctly document no content responses
-    return ResponseEntity.noContent().build();
   }
 
   @Operation(summary = "Search transactions", description = "Paginated search over transactions")
