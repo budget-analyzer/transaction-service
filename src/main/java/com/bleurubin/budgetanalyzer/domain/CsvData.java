@@ -1,12 +1,12 @@
 package com.bleurubin.budgetanalyzer.domain;
 
 import java.util.List;
-import java.util.Map;
+import java.util.Objects;
 
-public record CsvData(String fileName, List<Map<String, String>> rows) {
+public record CsvData(String fileName, String format, List<CsvRow> rows) {
   public CsvData {
-    if (rows == null) {
-      rows = List.of();
-    }
+    Objects.requireNonNull(fileName, "fileName cannot be null");
+    Objects.requireNonNull(format, "format cannot be null");
+    rows = Objects.requireNonNullElse(rows, List.of());
   }
 }

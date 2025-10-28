@@ -43,6 +43,7 @@ public class CsvServiceImpl implements CsvService {
       String format, String accountId, List<MultipartFile> files) {
     try {
       var importedTransactions = new ArrayList<Transaction>();
+
       for (MultipartFile file : files) {
         if (file.isEmpty()) {
           log.warn("File {} is empty, skipping", file.getOriginalFilename());
@@ -51,8 +52,10 @@ public class CsvServiceImpl implements CsvService {
 
         log.info("Importing csv file format: {} for file: {}", format, file.getOriginalFilename());
 
-        var csvData = csvParser.parseCsvFile(file);
-        importedTransactions.addAll(createTransactions(format, accountId, csvData));
+        var csvData = csvParser.parseCsvFile(file, format);
+        var transactions = createTransactions(accountId, csvData);
+
+        importedTransactions.addAll(transactions);
       }
 
       log.info(
@@ -66,10 +69,10 @@ public class CsvServiceImpl implements CsvService {
     }
   }
 
-  private List<Transaction> createTransactions(String format, String accountId, CsvData csvData) {
+  private List<Transaction> createTransactions(String accountId, CsvData csvData) {
     var transactions =
         csvData.rows().stream()
-            .map(r -> transactionMapper.map(csvData.fileName(), format, accountId, r))
+            .map(r -> transactionMapper.map(csvData.fileName(), csvData.format(), accountId, r))
             .toList();
 
     return transactionService.createTransactions(transactions);
