@@ -2,7 +2,6 @@ package com.bleurubin.budgetanalyzer.service.impl;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,23 +9,16 @@ import com.bleurubin.budgetanalyzer.api.request.TransactionFilter;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.repository.TransactionRepository;
 import com.bleurubin.budgetanalyzer.repository.spec.TransactionSpecifications;
-import com.bleurubin.budgetanalyzer.service.SoftDeleteOperations;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
 import com.bleurubin.service.exception.ResourceNotFoundException;
 
 @Service
-public class TransactionServiceImpl
-    implements TransactionService, SoftDeleteOperations<Transaction, Long> {
+public class TransactionServiceImpl implements TransactionService {
 
   private final TransactionRepository transactionRepository;
 
   public TransactionServiceImpl(TransactionRepository transactionRepository) {
     this.transactionRepository = transactionRepository;
-  }
-
-  @Override
-  public JpaSpecificationExecutor<Transaction> getRepository() {
-    return transactionRepository;
   }
 
   @Override
@@ -43,7 +35,8 @@ public class TransactionServiceImpl
 
   @Override
   public Transaction getTransaction(Long id) {
-    return findById(id)
+    return transactionRepository
+        .findByIdActive(id)
         .orElseThrow(() -> new ResourceNotFoundException("Transaction not found with id: " + id));
   }
 
@@ -53,17 +46,18 @@ public class TransactionServiceImpl
     return null;
   }
 
+  // this is a soft delete
   @Override
   @Transactional
   public void deleteTransaction(Long id) {
     var transaction = getTransaction(id);
-    transaction.setDeleted(true);
+    transaction.markDeleted();
 
     transactionRepository.save(transaction);
   }
 
   @Override
   public List<Transaction> search(TransactionFilter filter) {
-    return findAll(TransactionSpecifications.withFilter(filter));
+    return transactionRepository.findAllActive(TransactionSpecifications.withFilter(filter));
   }
 }

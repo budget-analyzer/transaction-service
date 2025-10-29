@@ -1,9 +1,9 @@
 package com.bleurubin.budgetanalyzer.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import com.bleurubin.budgetanalyzer.domain.Transaction;
+import com.bleurubin.core.repository.SoftDeleteOperations;
 
 public interface TransactionRepository
-    extends JpaRepository<Transaction, Long>, JpaSpecificationExecutor<Transaction> {}
+    extends JpaRepository<Transaction, Long>, SoftDeleteOperations<Transaction> {}
