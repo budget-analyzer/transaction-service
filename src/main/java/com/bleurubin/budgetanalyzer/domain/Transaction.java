@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -17,10 +18,13 @@ import jakarta.validation.constraints.NotNull;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
+import com.bleurubin.core.domain.SoftDeletable;
+import com.bleurubin.core.domain.SoftDeleteInfo;
+
 /** Transaction entity representing a financial transaction. */
 @Entity
 @Schema(description = "Transaction entity representing a financial transaction")
-public class Transaction {
+public class Transaction implements SoftDeletable {
 
   /** Unique identifier for the transaction. */
   @Id
@@ -103,12 +107,7 @@ public class Transaction {
       example = "2025-10-14T12:34:56Z")
   private Instant updatedAt;
 
-  /** Boolean indicating if the transaction has been soft deleted. */
-  @Column(nullable = false)
-  private Boolean deleted = false;
-
-  /** Timestamp when the transaction was soft deleted. */
-  private Instant deletedAt;
+  @Embedded private SoftDeleteInfo softDelete;
 
   /** Sets the creation and update timestamps before persisting. */
   @PrePersist
@@ -302,39 +301,8 @@ public class Transaction {
     this.updatedAt = updatedAt;
   }
 
-  /**
-   * Returns whether or not the transaction was soft deleted.
-   *
-   * @return true if transaction was soft deleted
-   */
-  public Boolean getDeleted() {
-    return deleted;
-  }
-
-  /**
-   * Sets the soft deleted flag.
-   *
-   * @param deleted the soft deleted flag
-   */
-  public void setDeleted(Boolean deleted) {
-    this.deleted = deleted;
-  }
-
-  /**
-   * Returns the soft deleted timestamp.
-   *
-   * @return the soft deleted timestamp
-   */
-  public Instant getDeletedAt() {
-    return deletedAt;
-  }
-
-  /**
-   * Sets the soft deleted timestamp.
-   *
-   * @param deletedAt the soft deleted timestamp
-   */
-  public void setDeletedAt(Instant deletedAt) {
-    this.deletedAt = deletedAt;
+  @Override
+  public SoftDeleteInfo getSoftDelete() {
+    return softDelete;
   }
 }
