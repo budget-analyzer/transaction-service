@@ -1,30 +1,24 @@
 package com.bleurubin.budgetanalyzer.domain;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import jakarta.validation.constraints.NotNull;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-import com.bleurubin.core.domain.SoftDeletable;
-import com.bleurubin.core.domain.SoftDeleteInfo;
+import com.bleurubin.core.domain.SoftDeletableEntity;
 
 /** Transaction entity representing a financial transaction. */
 @Entity
 @Schema(description = "Transaction entity representing a financial transaction")
-public class Transaction implements SoftDeletable {
+public class Transaction extends SoftDeletableEntity {
 
   /** Unique identifier for the transaction. */
   @Id
@@ -92,217 +86,67 @@ public class Transaction implements SoftDeletable {
       example = "Grocery shopping")
   private String description;
 
-  /** Timestamp when the transaction was created. */
-  @Column(updatable = false)
-  @Schema(
-      description = "Timestamp when the transaction was created",
-      requiredMode = Schema.RequiredMode.REQUIRED,
-      example = "2025-10-14T12:34:56Z")
-  private Instant createdAt;
-
-  /** Timestamp when the transaction was last updated. */
-  @Schema(
-      description = "Timestamp when the transaction was last updated",
-      requiredMode = Schema.RequiredMode.REQUIRED,
-      example = "2025-10-14T12:34:56Z")
-  private Instant updatedAt;
-
-  @Embedded private SoftDeleteInfo softDelete;
-
-  /** Sets the creation and update timestamps before persisting. */
-  @PrePersist
-  public void onCreate() {
-    createdAt = updatedAt = Instant.now();
-  }
-
-  /** Updates the update timestamp before updating. */
-  @PreUpdate
-  public void onUpdate() {
-    updatedAt = Instant.now();
-  }
-
-  /**
-   * Returns the unique identifier for the transaction.
-   *
-   * @return the transaction ID
-   */
   public Long getId() {
     return id;
   }
 
-  /**
-   * Sets the unique identifier for the transaction.
-   *
-   * @param id the transaction ID
-   */
   public void setId(Long id) {
     this.id = id;
   }
 
-  /**
-   * Returns the account ID associated with the transaction.
-   *
-   * @return the account ID
-   */
   public String getAccountId() {
     return accountId;
   }
 
-  /**
-   * Sets the account ID associated with the transaction.
-   *
-   * @param accountId the account ID
-   */
   public void setAccountId(String accountId) {
     this.accountId = accountId;
   }
 
-  /**
-   * Returns the bank name.
-   *
-   * @return the bank name
-   */
   public String getBankName() {
     return bankName;
   }
 
-  /**
-   * Sets the bank name.
-   *
-   * @param bankName the bank name
-   */
   public void setBankName(String bankName) {
     this.bankName = bankName;
   }
 
-  /**
-   * Returns the date of the transaction.
-   *
-   * @return the transaction date
-   */
   public LocalDate getDate() {
     return date;
   }
 
-  /**
-   * Sets the date of the transaction.
-   *
-   * @param date the transaction date
-   */
   public void setDate(LocalDate date) {
     this.date = date;
   }
 
-  /**
-   * Returns the ISO currency code.
-   *
-   * @return the currency ISO code
-   */
   public String getCurrencyIsoCode() {
     return currencyIsoCode;
   }
 
-  /**
-   * Sets the ISO currency code.
-   *
-   * @param currencyIsoCode the currency ISO code
-   */
   public void setCurrencyIsoCode(String currencyIsoCode) {
     this.currencyIsoCode = currencyIsoCode;
   }
 
-  /**
-   * Returns the amount of the transaction.
-   *
-   * @return the transaction amount
-   */
   public BigDecimal getAmount() {
     return amount;
   }
 
-  /**
-   * Sets the amount of the transaction.
-   *
-   * @param amount the transaction amount
-   */
   public void setAmount(BigDecimal amount) {
     this.amount = amount;
   }
 
-  /**
-   * Returns the type of the transaction.
-   *
-   * @return the transaction type
-   */
   public TransactionType getType() {
     return type;
   }
 
-  /**
-   * Sets the type of the transaction.
-   *
-   * @param type the transaction type
-   */
   public void setType(TransactionType type) {
     this.type = type;
   }
 
-  /**
-   * Returns the description of the transaction.
-   *
-   * @return the transaction description
-   */
   public String getDescription() {
     return description;
   }
 
-  /**
-   * Sets the description of the transaction.
-   *
-   * @param description the transaction description
-   */
   public void setDescription(String description) {
     this.description = description;
-  }
-
-  /**
-   * Returns the creation timestamp.
-   *
-   * @return the creation timestamp
-   */
-  public Instant getCreatedAt() {
-    return createdAt;
-  }
-
-  /**
-   * Sets the creation timestamp.
-   *
-   * @param createdAt the creation timestamp
-   */
-  public void setCreatedAt(Instant createdAt) {
-    this.createdAt = createdAt;
-  }
-
-  /**
-   * Returns the last updated timestamp.
-   *
-   * @return the last updated timestamp
-   */
-  public Instant getUpdatedAt() {
-    return updatedAt;
-  }
-
-  /**
-   * Sets the last updated timestamp.
-   *
-   * @param updatedAt the last updated timestamp
-   */
-  public void setUpdatedAt(Instant updatedAt) {
-    this.updatedAt = updatedAt;
-  }
-
-  @Override
-  public SoftDeleteInfo getSoftDelete() {
-    return softDelete;
   }
 }
