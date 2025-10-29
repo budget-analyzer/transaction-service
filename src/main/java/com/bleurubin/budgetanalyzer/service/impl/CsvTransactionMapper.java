@@ -233,6 +233,7 @@ class CsvTransactionMapper {
     return s == null || s.isBlank();
   }
 
+  // Helper class to track filename and line number during import for error messages
   private record CsvFileContext(String fileName, String format, CsvRow csvRow) {
     int lineNumber() {
       return csvRow.lineNumber();
