@@ -6,7 +6,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 
-public interface CsvService {
+public interface TransactionImportService {
 
   List<Transaction> importCsvFiles(String format, String accountId, List<MultipartFile> files);
 }
