@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.bleurubin.budgetanalyzer.config.BudgetAnalyzerProperties;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
 import com.bleurubin.budgetanalyzer.service.BudgetAnalyzerError;
-import com.bleurubin.budgetanalyzer.service.CsvService;
+import com.bleurubin.budgetanalyzer.service.TransactionImportService;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
 import com.bleurubin.core.csv.CsvData;
 import com.bleurubin.core.csv.CsvParser;
@@ -20,15 +20,15 @@ import com.bleurubin.core.util.JsonUtils;
 import com.bleurubin.service.exception.BusinessException;
 
 @Service
-public class CsvServiceImpl implements CsvService {
+public class TransactionImportServiceImpl implements TransactionImportService {
 
-  private static final Logger log = LoggerFactory.getLogger(CsvServiceImpl.class);
+  private static final Logger log = LoggerFactory.getLogger(TransactionImportServiceImpl.class);
 
   private final CsvParser csvParser;
   private final CsvTransactionMapper transactionMapper;
   private final TransactionService transactionService;
 
-  public CsvServiceImpl(
+  public TransactionImportServiceImpl(
       BudgetAnalyzerProperties appProperties,
       CsvParser csvParser,
       TransactionService transactionService) {

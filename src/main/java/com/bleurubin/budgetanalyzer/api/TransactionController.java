@@ -33,7 +33,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 import com.bleurubin.budgetanalyzer.api.request.TransactionFilter;
 import com.bleurubin.budgetanalyzer.domain.Transaction;
-import com.bleurubin.budgetanalyzer.service.CsvService;
+import com.bleurubin.budgetanalyzer.service.TransactionImportService;
 import com.bleurubin.budgetanalyzer.service.TransactionService;
 import com.bleurubin.core.util.JsonUtils;
 import com.bleurubin.service.api.ApiErrorResponse;
@@ -46,11 +46,12 @@ public class TransactionController {
 
   private static final Logger log = LoggerFactory.getLogger(TransactionController.class);
 
-  private final CsvService csvService;
+  private final TransactionImportService transactionImportService;
   private final TransactionService transactionService;
 
-  public TransactionController(CsvService csvService, TransactionService transactionService) {
-    this.csvService = csvService;
+  public TransactionController(
+      TransactionImportService csvService, TransactionService transactionService) {
+    this.transactionImportService = csvService;
     this.transactionService = transactionService;
   }
 
@@ -113,7 +114,7 @@ public class TransactionController {
       throw new InvalidRequestException("No files provided");
     }
 
-    return csvService.importCsvFiles(format, accountId.orElse(null), files);
+    return transactionImportService.importCsvFiles(format, accountId.orElse(null), files);
   }
 
   @Operation(summary = "Get transactions", description = "Get all transactions")
