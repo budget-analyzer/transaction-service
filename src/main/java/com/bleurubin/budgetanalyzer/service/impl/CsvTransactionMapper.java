@@ -23,6 +23,9 @@ import com.bleurubin.service.exception.BusinessException;
 
 // package private class- this is just an implementation detail and shouldn't be
 // used outside of the service.impl package
+// class needs to track filecontext for better error messages (file/linenumber/value/error)
+// philosophy is to throw error messages as close to parsing errors as possible to get exact
+// error/linenumber info
 class CsvTransactionMapper {
 
   private static final Logger log = LoggerFactory.getLogger(CsvTransactionMapper.class);
@@ -108,7 +111,7 @@ class CsvTransactionMapper {
 
     var columnName =
         (type == TransactionType.CREDIT) ? csvConfig.creditHeader() : csvConfig.debitHeader();
-    transaction.setAmount(parseAmount(row.get(columnName)));
+    transaction.setAmount(parseAmount(fileContext, row.get(columnName)));
   }
 
   // There is no explicit type column, we get the type by determining which
@@ -131,17 +134,28 @@ class CsvTransactionMapper {
     }
 
     transaction.setType(type);
-    transaction.setAmount(parseAmount(row.get(amountColumnName)));
+    transaction.setAmount(parseAmount(fileContext, row.get(amountColumnName)));
   }
 
-  private BigDecimal parseAmount(String raw) {
-    if (isBlank(raw)) {
+  private BigDecimal parseAmount(CsvFileContext fileContext, String rawAmount) {
+    if (isBlank(rawAmount)) {
       throw new BusinessException(
-          "Missing transaction amount value", BudgetAnalyzerError.CSV_PARSING_ERROR.name());
+          String.format(
+              "Missing amount value at line %d in file '%s'",
+              fileContext.lineNumber(), fileContext.fileName()),
+          BudgetAnalyzerError.CSV_PARSING_ERROR.name());
     }
 
-    var cleaned = raw.replaceAll("[^\\d.-]", "");
-    return new BigDecimal(cleaned);
+    try {
+      var cleaned = rawAmount.replaceAll(",", "");
+      return new BigDecimal(cleaned);
+    } catch (Exception e) {
+      throw new BusinessException(
+          String.format(
+              "Invalid amount value '%s' at line %d in file '%s'",
+              rawAmount, fileContext.lineNumber(), fileContext.fileName()),
+          BudgetAnalyzerError.CSV_PARSING_ERROR.name());
+    }
   }
 
   /*
@@ -156,8 +170,16 @@ class CsvTransactionMapper {
 
     try {
       return LocalDate.from(formatter.parse(rawDate));
-    } catch (DateTimeParseException e) {
-      return parseWithSimplifiedFormat(dateFormat, rawDate);
+    } catch (DateTimeParseException d) {
+      try {
+        return parseWithSimplifiedFormat(dateFormat, rawDate);
+      } catch (Exception e) {
+        throw new BusinessException(
+            String.format(
+                "Invalid date value '%s' at line %d in file '%s'",
+                rawDate, fileContext.lineNumber(), fileContext.fileName()),
+            BudgetAnalyzerError.CSV_PARSING_ERROR.name());
+      }
     }
   }
 
