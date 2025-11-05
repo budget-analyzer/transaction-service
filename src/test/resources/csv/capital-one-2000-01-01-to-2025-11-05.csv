@@ -1,0 +1,1181 @@
+Account Number,Transaction Description,Transaction Date,Transaction Type,Transaction Amount,Balance
+0568,Interest Paid,01/09/00,Credit,1099.10,8139.26
+0568,Payroll Deposit,01/11/00,Credit,1348.67,9068.28
+0568,ATM Withdrawal,01/25/00,Debit,767.57,7594.45
+0568,Mortgage Payment,02/02/00,Debit,1113.16,1888.27
+0568,ATM Deposit,02/04/00,Credit,327.84,5841.30
+0568,Internet Service,02/07/00,Debit,1192.31,9934.15
+0568,Credit Card Payment,02/08/00,Debit,1363.10,8577.78
+0568,Mortgage Payment,02/13/00,Debit,1352.67,2117.82
+0568,Medical Payment,02/18/00,Debit,621.48,6771.06
+0568,Medical Payment,02/24/00,Debit,1841.11,6467.24
+0568,Reimbursement,03/06/00,Credit,873.98,5023.93
+0568,Direct Deposit,03/08/00,Credit,683.68,2805.37
+0568,Phone Service,03/13/00,Debit,565.50,393.29
+0568,Reimbursement,03/21/00,Credit,629.29,8029.14
+0568,Car Payment,03/29/00,Debit,1585.47,1635.21
+0568,Debit Card Purchase,04/12/00,Debit,1044.09,8458.66
+0568,Phone Service,04/13/00,Debit,1963.50,2587.81
+0568,Electric Bill,04/13/00,Debit,1987.03,1628.12
+0568,Restaurant,04/18/00,Debit,495.54,4419.44
+0568,ATM Deposit,04/19/00,Credit,857.88,529.20
+0568,Interest Paid,05/04/00,Credit,205.27,1630.77
+0568,Debit Card Purchase,05/29/00,Debit,919.05,2109.41
+0568,Pharmacy,06/05/00,Debit,106.85,3502.09
+0568,ATM Deposit,06/10/00,Credit,219.02,6789.96
+0568,Restaurant,07/12/00,Debit,338.31,8185.15
+0568,Grocery Store,07/14/00,Debit,928.83,9712.22
+0568,Credit Card Payment,07/23/00,Debit,920.38,2318.91
+0568,Debit Card Purchase,08/04/00,Debit,1865.77,7439.63
+0568,Check Payment,08/04/00,Debit,1285.81,4962.39
+0568,Car Payment,08/19/00,Debit,1062.15,787.97
+0568,Grocery Store,08/28/00,Debit,795.14,1602.64
+0568,Credit Card Payment,08/30/00,Debit,468.77,158.13
+0568,Gas Station,09/13/00,Debit,828.44,7171.17
+0568,Phone Service,10/08/00,Debit,1524.79,7212.84
+0568,Wire Transfer,10/31/00,Credit,784.54,5524.44
+0568,Mobile Deposit,11/06/00,Credit,1427.74,6976.58
+0568,Debit Card Purchase,11/19/00,Debit,273.38,8198.94
+0568,Rent Payment,11/23/00,Debit,632.69,1089.04
+0568,Mobile Deposit,12/01/00,Credit,836.89,7444.30
+0568,Gym Membership,12/01/00,Debit,59.98,6472.00
+0568,ATM Deposit,12/09/00,Credit,604.48,1402.41
+0568,Rent Payment,12/21/00,Debit,379.96,7663.35
+0568,Pharmacy,12/22/00,Debit,1825.38,6975.79
+0568,Check Payment,12/27/00,Debit,1627.69,1559.36
+0568,Streaming Service,12/30/00,Debit,96.00,896.20
+0568,Interest Paid,01/28/01,Credit,495.23,9441.86
+0568,ATM Deposit,02/13/01,Credit,976.63,2791.75
+0568,Pharmacy,02/15/01,Debit,380.84,8907.56
+0568,Phone Service,02/16/01,Debit,1614.46,2646.29
+0568,Mobile Deposit,02/18/01,Credit,791.62,9685.31
+0568,ATM Deposit,02/21/01,Credit,369.48,4421.05
+0568,Reimbursement,02/22/01,Credit,1896.26,2146.68
+0568,ATM Deposit,03/14/01,Credit,124.67,2554.63
+0568,ATM Deposit,03/31/01,Credit,272.94,4192.85
+0568,Mortgage Payment,04/07/01,Debit,1359.56,706.59
+0568,Gym Membership,04/15/01,Debit,1279.36,3111.38
+0568,Direct Deposit,04/21/01,Credit,765.01,1923.56
+0568,Check Payment,05/19/01,Debit,796.42,1295.02
+0568,ATM Withdrawal,06/01/01,Debit,1895.74,1459.93
+0568,Debit Card Purchase,06/15/01,Debit,1412.97,8587.46
+0568,Phone Service,06/16/01,Debit,1965.83,4889.16
+0568,Medical Payment,06/18/01,Debit,1241.50,1472.94
+0568,Wire Transfer,06/25/01,Credit,542.05,6973.55
+0568,Check Payment,07/17/01,Debit,944.31,6503.18
+0568,Refund,07/18/01,Credit,348.18,9891.27
+0568,Interest Paid,07/22/01,Credit,432.44,5142.45
+0568,Mortgage Payment,07/24/01,Debit,783.11,6208.31
+0568,Phone Service,07/28/01,Debit,264.65,8539.40
+0568,Insurance Payment,07/30/01,Debit,729.67,7674.21
+0568,Mobile Deposit,08/04/01,Credit,890.35,822.17
+0568,Mobile Deposit,08/14/01,Credit,284.26,6600.52
+0568,Check Payment,08/18/01,Debit,563.45,9187.05
+0568,Pharmacy,08/25/01,Debit,1961.38,8247.26
+0568,Refund,09/02/01,Credit,813.02,9037.50
+0568,Car Payment,09/02/01,Debit,1692.28,2654.75
+0568,Direct Deposit,09/14/01,Credit,382.25,406.56
+0568,Payroll Deposit,09/22/01,Credit,545.03,5390.98
+0568,Electric Bill,11/04/01,Debit,653.31,2851.30
+0568,Grocery Store,11/05/01,Debit,980.04,6108.74
+0568,Restaurant,11/05/01,Debit,1201.00,4307.35
+0568,Wire Transfer,11/24/01,Credit,599.39,8460.84
+0568,Online Payment,12/17/01,Debit,1908.37,5857.28
+0568,Internet Service,12/25/01,Debit,778.20,882.22
+0568,Phone Service,12/29/01,Debit,1122.12,5622.53
+0568,Electric Bill,12/30/01,Debit,1511.64,7370.06
+0568,Restaurant,02/01/02,Debit,233.57,4840.18
+0568,Grocery Store,02/09/02,Debit,424.85,7324.98
+0568,Check Payment,02/11/02,Debit,1448.87,9021.55
+0568,Restaurant,02/23/02,Debit,95.77,1163.60
+0568,Restaurant,02/25/02,Debit,864.77,7323.02
+0568,Online Payment,02/25/02,Debit,805.14,1566.27
+0568,Mortgage Payment,03/02/02,Debit,1662.50,8557.12
+0568,Gas Station,03/03/02,Debit,443.49,4963.30
+0568,Payroll Deposit,03/12/02,Credit,830.66,8314.50
+0568,Mobile Deposit,03/22/02,Credit,1685.09,1644.36
+0568,Streaming Service,04/04/02,Debit,1957.77,5052.14
+0568,ATM Withdrawal,04/07/02,Debit,1306.22,9941.49
+0568,Mobile Deposit,04/21/02,Credit,85.87,589.04
+0568,Restaurant,05/11/02,Debit,467.83,914.27
+0568,Payroll Deposit,05/29/02,Credit,1171.23,9495.75
+0568,Phone Service,05/30/02,Debit,1838.13,741.61
+0568,Restaurant,06/05/02,Debit,502.67,3908.14
+0568,Online Payment,06/06/02,Debit,1441.31,5064.60
+0568,Online Payment,06/17/02,Debit,9.19,4696.12
+0568,Pharmacy,06/26/02,Debit,1581.53,8559.32
+0568,Rent Payment,07/06/02,Debit,1075.66,824.56
+0568,Payroll Deposit,07/11/02,Credit,584.80,9475.25
+0568,Mortgage Payment,07/16/02,Debit,1892.38,7887.94
+0568,Electric Bill,08/05/02,Debit,434.66,5702.91
+0568,Car Payment,08/10/02,Debit,974.60,9116.93
+0568,Refund,08/11/02,Credit,860.70,4615.60
+0568,Restaurant,08/18/02,Debit,1700.69,5688.06
+0568,Refund,08/24/02,Credit,971.48,7892.13
+0568,Electric Bill,08/24/02,Debit,1030.67,3492.55
+0568,Internet Service,08/30/02,Debit,288.50,3179.88
+0568,Streaming Service,09/04/02,Debit,123.14,7342.58
+0568,Streaming Service,09/08/02,Debit,1307.17,8476.02
+0568,Streaming Service,09/09/02,Debit,1192.31,7701.49
+0568,Credit Card Payment,09/13/02,Debit,1767.79,3478.31
+0568,Phone Service,09/22/02,Debit,346.11,4189.81
+0568,Pharmacy,09/27/02,Debit,879.14,4032.47
+0568,Check Payment,09/29/02,Debit,1122.04,1174.09
+0568,Debit Card Purchase,10/09/02,Debit,804.16,6176.72
+0568,ATM Withdrawal,11/01/02,Debit,1612.40,7598.15
+0568,Streaming Service,11/19/02,Debit,1164.22,4551.15
+0568,Electric Bill,12/04/02,Debit,313.29,6894.54
+0568,Medical Payment,12/21/02,Debit,1388.70,4952.30
+0568,Mortgage Payment,12/24/02,Debit,1330.90,7666.07
+0568,Online Payment,12/27/02,Debit,741.81,9838.55
+0568,Phone Service,12/28/02,Debit,230.73,6134.99
+0568,Direct Deposit,01/01/03,Credit,1500.15,7605.34
+0568,ATM Withdrawal,01/10/03,Debit,909.64,7952.46
+0568,Medical Payment,01/11/03,Debit,248.11,1466.16
+0568,ATM Deposit,01/15/03,Credit,902.98,5356.70
+0568,Online Payment,01/17/03,Debit,1922.61,1402.72
+0568,Debit Card Purchase,02/14/03,Debit,69.48,5557.10
+0568,Phone Service,03/04/03,Debit,1079.46,9842.72
+0568,Refund,03/06/03,Credit,926.20,985.84
+0568,ATM Deposit,03/14/03,Credit,899.46,6671.16
+0568,Streaming Service,03/21/03,Debit,1221.08,7666.37
+0568,Direct Deposit,04/01/03,Credit,772.84,7549.04
+0568,Insurance Payment,04/02/03,Debit,1422.24,1135.61
+0568,ATM Deposit,04/04/03,Credit,557.58,5514.54
+0568,Online Payment,04/16/03,Debit,622.41,4045.46
+0568,Transfer from Savings,05/25/03,Credit,847.53,9651.86
+0568,Phone Service,06/07/03,Debit,1358.07,712.11
+0568,Internet Service,06/16/03,Debit,1125.22,9620.69
+0568,Gym Membership,06/19/03,Debit,1479.62,8795.94
+0568,Interest Paid,06/29/03,Credit,1680.97,9943.48
+0568,Grocery Store,07/14/03,Debit,1148.68,8101.60
+0568,Wire Transfer,07/23/03,Credit,240.83,2764.12
+0568,Debit Card Purchase,07/30/03,Debit,114.73,786.46
+0568,Transfer from Savings,08/10/03,Credit,1245.37,1493.66
+0568,Mortgage Payment,08/13/03,Debit,448.96,7215.15
+0568,Phone Service,08/14/03,Debit,588.51,3586.18
+0568,Phone Service,08/30/03,Debit,1174.47,9837.95
+0568,Transfer from Savings,09/07/03,Credit,717.86,3189.77
+0568,Phone Service,09/22/03,Debit,1157.75,2933.87
+0568,Grocery Store,09/24/03,Debit,1846.85,3834.05
+0568,Grocery Store,10/09/03,Debit,951.93,9763.37
+0568,Medical Payment,10/13/03,Debit,51.31,1197.00
+0568,ATM Deposit,10/21/03,Credit,175.69,6484.79
+0568,Rent Payment,11/09/03,Debit,491.13,3613.07
+0568,Streaming Service,11/09/03,Debit,1020.02,8503.67
+0568,Mobile Deposit,11/14/03,Credit,1747.82,4497.78
+0568,ATM Withdrawal,11/27/03,Debit,44.83,5669.23
+0568,Car Payment,11/27/03,Debit,933.10,7050.83
+0568,Check Payment,12/02/03,Debit,1715.76,9479.14
+0568,Check Payment,12/04/03,Debit,669.21,4981.81
+0568,Wire Transfer,01/03/04,Credit,1066.47,9144.95
+0568,Direct Deposit,01/04/04,Credit,1653.74,9914.87
+0568,Debit Card Purchase,02/13/04,Debit,660.50,2790.13
+0568,Interest Paid,02/21/04,Credit,19.34,2945.63
+0568,Mobile Deposit,02/29/04,Credit,1838.00,1349.41
+0568,Gas Bill,02/29/04,Debit,1122.20,2747.38
+0568,Phone Service,03/05/04,Debit,1656.60,9908.61
+0568,Streaming Service,03/14/04,Debit,1273.80,1026.88
+0568,Internet Service,03/18/04,Debit,1705.08,7163.07
+0568,Mortgage Payment,04/23/04,Debit,266.48,2488.39
+0568,Rent Payment,05/05/04,Debit,368.06,7891.85
+0568,Check Payment,05/09/04,Debit,1255.97,7344.90
+0568,Gym Membership,05/09/04,Debit,926.65,6219.00
+0568,Check Payment,05/11/04,Debit,205.47,2562.01
+0568,Gas Station,05/31/04,Debit,1449.47,7482.52
+0568,Restaurant,06/03/04,Debit,1749.82,8420.24
+0568,Wire Transfer,06/05/04,Credit,292.70,4399.89
+0568,Pharmacy,07/10/04,Debit,1191.14,5590.56
+0568,Insurance Payment,07/17/04,Debit,1520.71,9144.92
+0568,Transfer from Savings,08/08/04,Credit,1336.06,1355.58
+0568,Refund,08/10/04,Credit,1680.02,5152.91
+0568,Debit Card Purchase,08/20/04,Debit,1259.48,3881.72
+0568,Restaurant,08/23/04,Debit,1430.20,2043.03
+0568,Mortgage Payment,08/24/04,Debit,466.58,8189.37
+0568,Transfer from Savings,08/25/04,Credit,908.76,6542.19
+0568,Internet Service,08/30/04,Debit,1746.24,8164.34
+0568,Refund,09/20/04,Credit,151.46,5420.10
+0568,Online Payment,10/05/04,Debit,515.25,5050.74
+0568,Refund,10/31/04,Credit,1057.24,2957.22
+0568,Phone Service,11/08/04,Debit,1968.07,4746.45
+0568,Gas Bill,11/10/04,Debit,1105.40,8996.96
+0568,Car Payment,11/14/04,Debit,1955.22,6389.05
+0568,Pharmacy,11/28/04,Debit,979.60,7236.81
+0568,Wire Transfer,11/29/04,Credit,1664.90,3760.73
+0568,Debit Card Purchase,12/02/04,Debit,1067.73,2404.97
+0568,Payroll Deposit,12/13/04,Credit,25.85,2372.31
+0568,Medical Payment,12/14/04,Debit,1286.65,8003.97
+0568,Gym Membership,01/03/05,Debit,795.97,1311.67
+0568,Reimbursement,01/10/05,Credit,459.32,6381.06
+0568,Car Payment,01/29/05,Debit,1064.28,1046.83
+0568,Gym Membership,01/29/05,Debit,1344.56,8741.27
+0568,ATM Withdrawal,02/05/05,Debit,1566.03,7956.15
+0568,Restaurant,02/23/05,Debit,1307.64,2580.05
+0568,Check Payment,03/08/05,Debit,1158.15,7917.27
+0568,Mortgage Payment,03/26/05,Debit,1786.00,2208.50
+0568,Refund,04/05/05,Credit,105.57,8744.44
+0568,Streaming Service,04/13/05,Debit,1598.33,2922.78
+0568,Gas Station,05/06/05,Debit,1692.06,866.00
+0568,Internet Service,05/07/05,Debit,1998.88,6177.74
+0568,Phone Service,05/07/05,Debit,1390.82,9437.45
+0568,Wire Transfer,05/17/05,Credit,1835.88,5037.26
+0568,Phone Service,05/22/05,Debit,354.21,906.93
+0568,Car Payment,05/25/05,Debit,933.72,7863.16
+0568,Debit Card Purchase,05/26/05,Debit,1877.87,7187.84
+0568,Electric Bill,05/30/05,Debit,1697.22,6186.59
+0568,Reimbursement,05/31/05,Credit,887.50,2378.75
+0568,Mortgage Payment,06/02/05,Debit,1086.43,708.21
+0568,Restaurant,06/15/05,Debit,1122.63,1253.01
+0568,Wire Transfer,06/15/05,Credit,30.08,438.23
+0568,Rent Payment,06/19/05,Debit,1750.53,620.11
+0568,Insurance Payment,06/21/05,Debit,1026.85,8403.97
+0568,Restaurant,06/23/05,Debit,1501.45,5546.20
+0568,Check Payment,07/01/05,Debit,40.77,9203.20
+0568,Transfer from Savings,07/14/05,Credit,695.92,6183.91
+0568,Gas Station,07/31/05,Debit,924.96,6296.07
+0568,Credit Card Payment,08/03/05,Debit,1583.86,2412.52
+0568,Reimbursement,08/13/05,Credit,346.53,579.65
+0568,Debit Card Purchase,08/19/05,Debit,828.60,1409.03
+0568,Reimbursement,08/21/05,Credit,1824.84,735.45
+0568,Wire Transfer,08/22/05,Credit,731.90,468.05
+0568,Insurance Payment,09/16/05,Debit,1990.57,6730.38
+0568,Pharmacy,10/02/05,Debit,1920.75,3922.48
+0568,ATM Deposit,10/20/05,Credit,1145.36,8658.50
+0568,Insurance Payment,10/23/05,Debit,1121.02,8965.79
+0568,Phone Service,10/24/05,Debit,212.07,8034.56
+0568,Gym Membership,10/30/05,Debit,1986.46,6914.17
+0568,Medical Payment,11/12/05,Debit,1726.96,3092.69
+0568,Rent Payment,11/22/05,Debit,1030.31,2552.14
+0568,Restaurant,12/13/05,Debit,749.82,2024.99
+0568,Mobile Deposit,12/19/05,Credit,1823.14,555.36
+0568,Online Payment,12/23/05,Debit,1895.62,1917.96
+0568,Gas Bill,12/26/05,Debit,1047.32,9477.85
+0568,Direct Deposit,01/04/06,Credit,1769.44,446.95
+0568,Refund,01/07/06,Credit,497.61,4521.61
+0568,Mobile Deposit,01/07/06,Credit,1437.05,9667.05
+0568,Streaming Service,02/15/06,Debit,846.99,1734.02
+0568,Grocery Store,02/19/06,Debit,517.33,9118.16
+0568,ATM Withdrawal,02/19/06,Debit,1276.32,3857.20
+0568,Medical Payment,02/23/06,Debit,595.73,6091.98
+0568,Gas Bill,02/28/06,Debit,442.16,5173.07
+0568,Mobile Deposit,03/07/06,Credit,913.79,8723.83
+0568,Gym Membership,03/07/06,Debit,1224.19,966.83
+0568,Pharmacy,03/16/06,Debit,1579.70,6742.76
+0568,ATM Deposit,03/17/06,Credit,266.03,4387.35
+0568,Transfer from Savings,03/20/06,Credit,1772.95,1054.94
+0568,Transfer from Savings,03/26/06,Credit,232.54,3882.23
+0568,Streaming Service,04/23/06,Debit,768.95,3085.59
+0568,ATM Withdrawal,04/24/06,Debit,533.16,8628.82
+0568,Refund,05/14/06,Credit,810.46,7704.44
+0568,Credit Card Payment,06/12/06,Debit,1760.80,6552.39
+0568,Medical Payment,06/17/06,Debit,1193.34,9691.54
+0568,ATM Withdrawal,06/19/06,Debit,698.23,1661.20
+0568,Debit Card Purchase,07/03/06,Debit,418.81,6476.93
+0568,Grocery Store,07/17/06,Debit,1444.75,6206.44
+0568,Transfer from Savings,08/10/06,Credit,818.39,6001.59
+0568,Car Payment,08/22/06,Debit,627.01,1633.19
+0568,Refund,08/31/06,Credit,759.92,726.57
+0568,Mobile Deposit,09/04/06,Credit,737.16,9691.32
+0568,Transfer from Savings,10/11/06,Credit,1909.25,8398.72
+0568,Reimbursement,10/19/06,Credit,1404.98,7336.77
+0568,Car Payment,10/21/06,Debit,200.78,2542.38
+0568,Direct Deposit,10/24/06,Credit,1450.66,6330.91
+0568,Phone Service,11/04/06,Debit,1044.58,8750.44
+0568,Online Payment,11/14/06,Debit,797.84,2506.58
+0568,Medical Payment,11/18/06,Debit,1661.91,9594.19
+0568,Debit Card Purchase,11/25/06,Debit,23.20,1253.70
+0568,Direct Deposit,11/29/06,Credit,1712.98,8872.42
+0568,Mobile Deposit,12/25/06,Credit,275.60,1316.87
+0568,Credit Card Payment,12/27/06,Debit,1193.73,1010.79
+0568,ATM Deposit,01/11/07,Credit,1835.59,4432.06
+0568,Gas Bill,01/18/07,Debit,1548.30,1906.67
+0568,Gas Bill,01/22/07,Debit,1951.78,8630.78
+0568,Credit Card Payment,01/24/07,Debit,1531.74,1613.64
+0568,Wire Transfer,01/28/07,Credit,1181.23,3167.74
+0568,Rent Payment,02/06/07,Debit,1004.13,863.36
+0568,Credit Card Payment,02/08/07,Debit,1009.31,157.93
+0568,Reimbursement,02/13/07,Credit,1261.66,5354.15
+0568,Wire Transfer,03/06/07,Credit,454.97,5017.25
+0568,Restaurant,03/09/07,Debit,370.92,3979.67
+0568,Gas Bill,03/12/07,Debit,61.55,7228.07
+0568,Online Payment,03/17/07,Debit,1959.66,2029.48
+0568,Payroll Deposit,04/23/07,Credit,1067.56,8979.31
+0568,Gas Station,05/08/07,Debit,326.31,4437.26
+0568,Gym Membership,05/12/07,Debit,420.01,5119.87
+0568,Gym Membership,05/23/07,Debit,1954.55,7154.89
+0568,Refund,05/30/07,Credit,1486.11,1965.00
+0568,Electric Bill,06/03/07,Debit,848.05,5378.28
+0568,Refund,06/05/07,Credit,1563.18,3358.06
+0568,ATM Deposit,06/21/07,Credit,318.97,4143.73
+0568,Streaming Service,06/30/07,Debit,1506.34,6846.75
+0568,Interest Paid,06/30/07,Credit,523.88,4313.02
+0568,Mortgage Payment,06/30/07,Debit,1264.54,5602.88
+0568,Mobile Deposit,07/15/07,Credit,251.67,8135.97
+0568,Rent Payment,07/20/07,Debit,1262.96,2394.07
+0568,Debit Card Purchase,07/21/07,Debit,392.20,2372.94
+0568,ATM Deposit,07/27/07,Credit,1281.21,2596.30
+0568,Online Payment,09/03/07,Debit,637.82,5840.18
+0568,Wire Transfer,09/21/07,Credit,283.00,5670.04
+0568,Insurance Payment,09/27/07,Debit,1965.12,8250.47
+0568,Insurance Payment,10/19/07,Debit,698.05,2216.35
+0568,Internet Service,10/29/07,Debit,1686.10,7278.98
+0568,Payroll Deposit,11/20/07,Credit,1861.39,3113.58
+0568,Restaurant,11/27/07,Debit,1132.54,8878.38
+0568,Internet Service,12/01/07,Debit,762.19,2064.71
+0568,Mortgage Payment,12/21/07,Debit,1463.14,9991.16
+0568,Electric Bill,01/03/08,Debit,1484.81,5885.09
+0568,Insurance Payment,01/06/08,Debit,255.38,4500.05
+0568,Credit Card Payment,01/21/08,Debit,1024.45,2349.53
+0568,Gas Station,02/17/08,Debit,1466.37,4130.85
+0568,Gas Bill,02/20/08,Debit,1204.58,4423.88
+0568,Mobile Deposit,02/21/08,Credit,1400.56,4696.68
+0568,Online Payment,02/29/08,Debit,1781.30,267.08
+0568,Debit Card Purchase,03/21/08,Debit,1337.98,2612.85
+0568,Car Payment,03/26/08,Debit,678.71,5392.46
+0568,Restaurant,03/27/08,Debit,358.06,8639.80
+0568,Gas Bill,03/28/08,Debit,333.14,4141.55
+0568,Check Payment,03/30/08,Debit,844.38,7607.69
+0568,Internet Service,04/05/08,Debit,86.39,1553.89
+0568,Medical Payment,04/16/08,Debit,1961.86,9257.78
+0568,Car Payment,04/20/08,Debit,6.22,9383.20
+0568,Wire Transfer,04/23/08,Credit,854.76,5602.38
+0568,Credit Card Payment,04/30/08,Debit,809.30,9474.77
+0568,Mobile Deposit,05/04/08,Credit,1415.05,8358.84
+0568,Restaurant,05/09/08,Debit,590.21,8128.10
+0568,ATM Withdrawal,05/10/08,Debit,1629.54,8972.95
+0568,Debit Card Purchase,05/13/08,Debit,943.08,2034.50
+0568,Phone Service,05/28/08,Debit,1870.22,9301.55
+0568,Mobile Deposit,06/02/08,Credit,1121.91,5617.80
+0568,Online Payment,06/02/08,Debit,905.71,4513.89
+0568,Gas Station,06/16/08,Debit,1049.33,2432.77
+0568,Grocery Store,07/11/08,Debit,535.55,1177.06
+0568,Pharmacy,07/13/08,Debit,938.74,4941.74
+0568,Payroll Deposit,07/17/08,Credit,1580.90,7533.70
+0568,Electric Bill,08/02/08,Debit,1606.01,2486.34
+0568,Phone Service,08/10/08,Debit,646.86,9662.20
+0568,Direct Deposit,08/14/08,Credit,1255.00,2540.90
+0568,Wire Transfer,08/18/08,Credit,1140.63,2364.95
+0568,Mobile Deposit,08/31/08,Credit,734.85,7067.22
+0568,Car Payment,09/07/08,Debit,1049.96,1536.89
+0568,Pharmacy,09/17/08,Debit,1728.06,4672.88
+0568,Payroll Deposit,09/24/08,Credit,1257.71,8315.30
+0568,Rent Payment,10/08/08,Debit,1506.57,3948.38
+0568,Rent Payment,10/09/08,Debit,1645.81,3369.53
+0568,Credit Card Payment,10/12/08,Debit,182.58,4299.17
+0568,Check Payment,10/15/08,Debit,618.95,521.83
+0568,Debit Card Purchase,10/21/08,Debit,1751.47,1942.39
+0568,Pharmacy,10/28/08,Debit,436.86,7258.14
+0568,Wire Transfer,10/31/08,Credit,399.71,1861.28
+0568,Reimbursement,11/07/08,Credit,1207.15,4226.78
+0568,ATM Withdrawal,11/09/08,Debit,868.29,4455.78
+0568,Payroll Deposit,11/13/08,Credit,1429.02,9987.73
+0568,Restaurant,11/24/08,Debit,371.21,9438.44
+0568,Reimbursement,12/01/08,Credit,1053.25,995.38
+0568,Interest Paid,12/08/08,Credit,1031.57,6260.40
+0568,Pharmacy,12/27/08,Debit,359.22,8413.99
+0568,Gas Bill,12/27/08,Debit,592.59,4167.39
+0568,ATM Withdrawal,01/01/09,Debit,760.56,2551.01
+0568,Wire Transfer,01/04/09,Credit,137.53,6013.35
+0568,Payroll Deposit,01/08/09,Credit,1695.39,4508.92
+0568,Restaurant,02/03/09,Debit,300.72,7130.89
+0568,ATM Withdrawal,02/03/09,Debit,71.40,9190.97
+0568,ATM Withdrawal,02/10/09,Debit,1263.07,6206.00
+0568,Medical Payment,03/15/09,Debit,1024.32,9092.81
+0568,Mortgage Payment,03/24/09,Debit,1162.33,3676.05
+0568,Streaming Service,05/07/09,Debit,493.98,5041.96
+0568,Direct Deposit,05/26/09,Credit,163.63,9167.88
+0568,Rent Payment,05/28/09,Debit,548.89,7349.44
+0568,Online Payment,06/09/09,Debit,1277.35,771.71
+0568,Insurance Payment,06/14/09,Debit,859.95,369.28
+0568,Gas Bill,07/22/09,Debit,151.34,6190.82
+0568,Gas Bill,07/25/09,Debit,1872.71,3528.00
+0568,Rent Payment,08/19/09,Debit,1248.90,4468.67
+0568,Medical Payment,08/22/09,Debit,577.83,2073.00
+0568,Debit Card Purchase,08/23/09,Debit,207.19,4168.73
+0568,Restaurant,08/26/09,Debit,431.61,7091.81
+0568,Car Payment,09/03/09,Debit,1135.83,2889.80
+0568,Mobile Deposit,09/05/09,Credit,227.99,2266.58
+0568,Streaming Service,09/06/09,Debit,1576.60,3625.75
+0568,Transfer from Savings,09/19/09,Credit,571.85,4847.01
+0568,Direct Deposit,10/10/09,Credit,1765.37,2546.43
+0568,Gas Bill,10/17/09,Debit,1873.01,1848.19
+0568,Payroll Deposit,10/20/09,Credit,1877.81,1081.58
+0568,Grocery Store,10/31/09,Debit,1515.15,4726.72
+0568,Car Payment,11/20/09,Debit,817.06,2173.68
+0568,Direct Deposit,12/17/09,Credit,1443.96,7148.69
+0568,Medical Payment,12/28/09,Debit,1047.20,2360.15
+0568,Streaming Service,12/29/09,Debit,174.25,7279.84
+0568,Rent Payment,01/04/10,Debit,1512.73,8365.86
+0568,Interest Paid,01/09/10,Credit,1522.41,8927.78
+0568,Credit Card Payment,01/13/10,Debit,13.07,1150.22
+0568,Restaurant,01/20/10,Debit,380.63,4973.79
+0568,Reimbursement,01/23/10,Credit,881.61,1724.05
+0568,Debit Card Purchase,01/26/10,Debit,589.62,8752.82
+0568,Car Payment,01/28/10,Debit,594.12,2814.16
+0568,Rent Payment,02/03/10,Debit,347.33,3501.28
+0568,ATM Deposit,02/07/10,Credit,872.77,3014.21
+0568,Mortgage Payment,02/09/10,Debit,527.89,9782.77
+0568,Debit Card Purchase,02/14/10,Debit,681.67,6782.45
+0568,Direct Deposit,03/08/10,Credit,218.04,8720.57
+0568,Insurance Payment,04/15/10,Debit,1200.57,3785.77
+0568,Electric Bill,04/21/10,Debit,1703.40,189.58
+0568,Gas Station,05/10/10,Debit,347.96,8983.62
+0568,Check Payment,06/05/10,Debit,1743.96,6361.74
+0568,Medical Payment,06/08/10,Debit,981.30,2746.25
+0568,Grocery Store,06/10/10,Debit,1774.64,1325.02
+0568,Internet Service,06/12/10,Debit,1792.71,817.49
+0568,Wire Transfer,06/21/10,Credit,1375.73,2491.86
+0568,Restaurant,06/22/10,Debit,417.33,9056.39
+0568,Payroll Deposit,06/23/10,Credit,1921.43,7112.47
+0568,Debit Card Purchase,07/17/10,Debit,1840.40,4107.72
+0568,Wire Transfer,07/26/10,Credit,714.15,284.68
+0568,Refund,08/01/10,Credit,1975.79,7846.17
+0568,ATM Withdrawal,08/05/10,Debit,818.81,459.08
+0568,Check Payment,08/07/10,Debit,408.19,1955.14
+0568,Streaming Service,08/11/10,Debit,271.98,6973.31
+0568,Mobile Deposit,08/12/10,Credit,874.70,1583.29
+0568,Reimbursement,08/26/10,Credit,319.95,137.49
+0568,Electric Bill,08/27/10,Debit,162.02,2320.08
+0568,Reimbursement,09/01/10,Credit,1853.52,6801.65
+0568,ATM Withdrawal,09/12/10,Debit,899.37,4959.54
+0568,Rent Payment,09/23/10,Debit,1221.47,4687.79
+0568,Grocery Store,09/26/10,Debit,1954.98,5582.68
+0568,ATM Withdrawal,10/02/10,Debit,619.41,3340.04
+0568,Interest Paid,10/07/10,Credit,1417.00,8010.67
+0568,Refund,10/31/10,Credit,299.45,5114.02
+0568,Online Payment,11/17/10,Debit,213.76,6502.76
+0568,Mobile Deposit,11/21/10,Credit,84.38,3113.98
+0568,Mobile Deposit,12/08/10,Credit,1510.70,4976.48
+0568,Transfer from Savings,12/15/10,Credit,355.08,5298.76
+0568,Check Payment,02/08/11,Debit,851.92,3391.57
+0568,Refund,02/13/11,Credit,1145.02,9660.07
+0568,ATM Withdrawal,02/16/11,Debit,1979.93,4776.39
+0568,Gas Bill,02/19/11,Debit,1838.12,5974.78
+0568,Restaurant,02/20/11,Debit,502.38,6112.14
+0568,Medical Payment,02/25/11,Debit,591.64,2856.93
+0568,Check Payment,03/02/11,Debit,1165.34,955.08
+0568,Gym Membership,03/20/11,Debit,96.32,2858.48
+0568,Phone Service,03/23/11,Debit,1472.65,6690.86
+0568,Interest Paid,03/24/11,Credit,524.40,6180.56
+0568,Mobile Deposit,03/24/11,Credit,472.02,6817.20
+0568,Rent Payment,04/05/11,Debit,1424.18,9230.15
+0568,ATM Withdrawal,04/08/11,Debit,232.59,5568.98
+0568,Phone Service,04/13/11,Debit,1488.74,2373.90
+0568,Gas Station,04/15/11,Debit,729.02,7669.76
+0568,Electric Bill,04/20/11,Debit,1146.04,3685.76
+0568,Transfer from Savings,04/22/11,Credit,1101.80,2668.74
+0568,Grocery Store,04/27/11,Debit,1752.95,1483.52
+0568,Gas Station,06/09/11,Debit,40.37,6364.02
+0568,Refund,06/14/11,Credit,1249.84,1772.03
+0568,Interest Paid,06/17/11,Credit,1953.88,313.10
+0568,Gym Membership,06/19/11,Debit,1142.59,5615.03
+0568,Mobile Deposit,06/21/11,Credit,607.40,5090.18
+0568,Transfer from Savings,06/24/11,Credit,595.25,7485.57
+0568,Debit Card Purchase,07/04/11,Debit,581.87,3470.76
+0568,Credit Card Payment,07/18/11,Debit,691.51,3013.72
+0568,Electric Bill,07/30/11,Debit,1022.98,5177.15
+0568,ATM Withdrawal,08/02/11,Debit,284.55,6976.16
+0568,Wire Transfer,09/14/11,Credit,1850.30,6468.18
+0568,Credit Card Payment,09/25/11,Debit,1238.20,4479.76
+0568,Payroll Deposit,10/01/11,Credit,1943.46,5081.40
+0568,Phone Service,10/04/11,Debit,556.34,6923.72
+0568,Debit Card Purchase,10/11/11,Debit,272.96,9986.52
+0568,Wire Transfer,11/04/11,Credit,1112.28,4183.72
+0568,Mobile Deposit,11/09/11,Credit,1502.96,4531.59
+0568,Gas Bill,11/13/11,Debit,856.13,1004.53
+0568,Credit Card Payment,12/05/11,Debit,311.30,922.00
+0568,Refund,12/09/11,Credit,1458.29,5176.67
+0568,Streaming Service,12/14/11,Debit,100.41,3937.39
+0568,Gas Station,01/01/12,Debit,528.68,132.25
+0568,Refund,01/02/12,Credit,1110.50,2025.84
+0568,Check Payment,01/09/12,Debit,1387.03,1142.17
+0568,Gas Bill,02/16/12,Debit,1398.52,405.33
+0568,Refund,02/29/12,Credit,1140.00,7847.68
+0568,Reimbursement,03/09/12,Credit,1858.57,5124.40
+0568,Gas Bill,03/12/12,Debit,214.48,7701.64
+0568,Interest Paid,03/29/12,Credit,690.58,1460.76
+0568,Streaming Service,04/05/12,Debit,292.51,660.10
+0568,Credit Card Payment,04/21/12,Debit,1409.70,1625.28
+0568,Gas Station,04/30/12,Debit,1935.32,4684.00
+0568,Insurance Payment,05/10/12,Debit,1606.01,1569.01
+0568,Payroll Deposit,05/19/12,Credit,1520.91,402.78
+0568,Mobile Deposit,05/21/12,Credit,291.14,2979.21
+0568,Transfer from Savings,06/06/12,Credit,344.82,5902.20
+0568,Credit Card Payment,06/19/12,Debit,344.71,1017.14
+0568,Phone Service,07/07/12,Debit,781.97,2954.25
+0568,Gas Bill,07/14/12,Debit,939.49,9466.54
+0568,Direct Deposit,07/29/12,Credit,1161.10,2670.42
+0568,Mortgage Payment,07/29/12,Debit,1249.89,5759.18
+0568,Pharmacy,08/05/12,Debit,957.04,4742.30
+0568,Mobile Deposit,08/16/12,Credit,1417.36,8983.59
+0568,Reimbursement,08/27/12,Credit,348.69,5418.66
+0568,Wire Transfer,08/29/12,Credit,1092.00,5993.13
+0568,Gym Membership,08/31/12,Debit,727.71,9893.91
+0568,Insurance Payment,09/05/12,Debit,1235.58,9994.02
+0568,Car Payment,09/06/12,Debit,72.82,6959.29
+0568,Pharmacy,09/23/12,Debit,823.81,2466.74
+0568,Refund,09/23/12,Credit,839.49,4585.88
+0568,Credit Card Payment,09/23/12,Debit,1957.83,5944.88
+0568,Wire Transfer,09/28/12,Credit,1448.67,2419.43
+0568,Credit Card Payment,09/30/12,Debit,64.65,8701.00
+0568,Grocery Store,10/07/12,Debit,750.15,5724.40
+0568,Check Payment,10/10/12,Debit,646.41,2912.79
+0568,Rent Payment,10/25/12,Debit,972.86,1196.38
+0568,Rent Payment,12/10/12,Debit,448.57,2371.73
+0568,Reimbursement,12/13/12,Credit,975.63,7634.35
+0568,Pharmacy,12/24/12,Debit,1858.17,581.01
+0568,Debit Card Purchase,12/28/12,Debit,456.75,4821.41
+0568,Debit Card Purchase,12/28/12,Debit,803.77,9985.59
+0568,Rent Payment,12/29/12,Debit,469.55,2011.22
+0568,Direct Deposit,01/03/13,Credit,1053.79,9207.65
+0568,Medical Payment,01/06/13,Debit,869.35,673.40
+0568,Car Payment,01/12/13,Debit,1327.90,7507.77
+0568,Medical Payment,01/19/13,Debit,781.77,3956.70
+0568,Medical Payment,01/21/13,Debit,798.30,6320.05
+0568,Streaming Service,01/26/13,Debit,500.51,7853.95
+0568,Transfer from Savings,02/01/13,Credit,1780.32,7511.75
+0568,Car Payment,02/07/13,Debit,116.75,3537.42
+0568,Phone Service,02/11/13,Debit,806.42,2110.23
+0568,Gas Station,02/20/13,Debit,1864.97,1037.69
+0568,Credit Card Payment,02/21/13,Debit,1946.07,7414.06
+0568,Wire Transfer,03/15/13,Credit,877.46,8583.32
+0568,Online Payment,03/15/13,Debit,354.24,5464.10
+0568,Rent Payment,03/30/13,Debit,471.29,3115.89
+0568,Phone Service,03/30/13,Debit,1222.55,937.66
+0568,ATM Withdrawal,04/10/13,Debit,1182.23,8817.33
+0568,Credit Card Payment,04/11/13,Debit,1925.52,9751.24
+0568,Transfer from Savings,04/12/13,Credit,500.18,1640.59
+0568,Debit Card Purchase,04/16/13,Debit,1831.44,8780.32
+0568,Car Payment,04/28/13,Debit,485.97,2406.70
+0568,Mortgage Payment,05/09/13,Debit,1772.79,1337.48
+0568,ATM Deposit,05/14/13,Credit,1745.41,5785.16
+0568,Reimbursement,05/29/13,Credit,640.79,7760.73
+0568,Wire Transfer,06/25/13,Credit,754.01,4886.23
+0568,Transfer from Savings,06/28/13,Credit,1494.42,827.61
+0568,Debit Card Purchase,07/16/13,Debit,82.97,745.43
+0568,Grocery Store,07/26/13,Debit,1823.52,4971.82
+0568,Credit Card Payment,07/31/13,Debit,1024.51,2116.52
+0568,Electric Bill,08/02/13,Debit,717.44,2185.96
+0568,Streaming Service,08/03/13,Debit,1154.09,7979.52
+0568,ATM Deposit,08/06/13,Credit,485.90,2567.87
+0568,Wire Transfer,08/15/13,Credit,254.61,4434.51
+0568,Mobile Deposit,08/16/13,Credit,110.16,1020.89
+0568,Direct Deposit,08/26/13,Credit,1311.46,2870.98
+0568,Gas Station,08/26/13,Debit,1466.76,9629.70
+0568,Reimbursement,08/29/13,Credit,1454.46,3334.24
+0568,Car Payment,09/04/13,Debit,88.97,2569.95
+0568,Debit Card Purchase,09/12/13,Debit,1956.55,2769.93
+0568,Payroll Deposit,09/18/13,Credit,1212.62,3257.14
+0568,Payroll Deposit,09/20/13,Credit,743.32,3337.36
+0568,Mobile Deposit,10/04/13,Credit,939.81,7284.44
+0568,Medical Payment,10/13/13,Debit,422.99,5781.07
+0568,Electric Bill,10/18/13,Debit,1459.10,1435.46
+0568,Rent Payment,10/23/13,Debit,1864.92,4467.04
+0568,ATM Withdrawal,10/26/13,Debit,64.29,1551.06
+0568,Credit Card Payment,10/27/13,Debit,1621.78,1462.49
+0568,Rent Payment,10/30/13,Debit,228.64,4741.36
+0568,Reimbursement,11/02/13,Credit,1744.79,7209.53
+0568,Interest Paid,11/04/13,Credit,1263.68,3138.05
+0568,Reimbursement,11/19/13,Credit,66.48,3126.61
+0568,Phone Service,11/20/13,Debit,776.58,2742.82
+0568,Car Payment,11/24/13,Debit,533.00,5403.15
+0568,Mobile Deposit,11/26/13,Credit,1847.19,8334.35
+0568,Credit Card Payment,12/18/13,Debit,1481.72,1589.84
+0568,Wire Transfer,12/20/13,Credit,156.05,1760.78
+0568,Mortgage Payment,12/21/13,Debit,638.65,3977.16
+0568,Electric Bill,01/15/14,Debit,1622.15,859.86
+0568,Internet Service,01/24/14,Debit,1261.90,3526.29
+0568,Direct Deposit,01/28/14,Credit,377.26,3645.77
+0568,Gym Membership,02/02/14,Debit,863.28,1360.24
+0568,Phone Service,02/16/14,Debit,1618.44,8440.37
+0568,Gym Membership,02/20/14,Debit,128.56,3149.83
+0568,Mortgage Payment,02/22/14,Debit,1530.94,6074.10
+0568,Electric Bill,02/28/14,Debit,1887.70,6502.46
+0568,Internet Service,03/02/14,Debit,1670.40,2294.79
+0568,Medical Payment,03/07/14,Debit,1414.75,1096.93
+0568,Restaurant,03/17/14,Debit,377.59,2129.44
+0568,Mortgage Payment,03/18/14,Debit,1111.42,6085.45
+0568,Wire Transfer,03/19/14,Credit,1338.92,1807.28
+0568,Rent Payment,03/22/14,Debit,1783.38,6800.17
+0568,Restaurant,04/02/14,Debit,574.72,2473.42
+0568,ATM Withdrawal,04/17/14,Debit,683.46,5391.20
+0568,Phone Service,04/18/14,Debit,1504.47,2833.46
+0568,Electric Bill,04/26/14,Debit,216.36,7447.24
+0568,Grocery Store,05/01/14,Debit,1643.16,4533.99
+0568,Credit Card Payment,05/07/14,Debit,1358.07,2185.28
+0568,Mortgage Payment,05/09/14,Debit,625.38,8463.51
+0568,Medical Payment,05/18/14,Debit,1869.44,5099.26
+0568,Reimbursement,05/21/14,Credit,677.58,4531.70
+0568,Online Payment,06/13/14,Debit,810.62,7791.27
+0568,Grocery Store,06/30/14,Debit,1385.39,4046.52
+0568,Electric Bill,07/02/14,Debit,176.02,1701.92
+0568,Reimbursement,07/06/14,Credit,240.07,7920.21
+0568,Direct Deposit,07/09/14,Credit,1426.38,187.37
+0568,Phone Service,07/16/14,Debit,595.77,3928.35
+0568,Mortgage Payment,07/25/14,Debit,226.32,7399.28
+0568,Mortgage Payment,07/27/14,Debit,1199.68,7852.46
+0568,Gym Membership,08/05/14,Debit,496.80,6901.33
+0568,Gym Membership,08/09/14,Debit,1878.55,5650.86
+0568,Debit Card Purchase,08/15/14,Debit,1039.70,5316.08
+0568,Wire Transfer,08/20/14,Credit,604.28,2549.17
+0568,Gas Station,08/20/14,Debit,1098.08,6318.70
+0568,Check Payment,08/22/14,Debit,704.07,7467.64
+0568,Medical Payment,08/23/14,Debit,1348.41,1993.70
+0568,Direct Deposit,08/26/14,Credit,1802.55,3619.91
+0568,Refund,08/30/14,Credit,191.95,7193.85
+0568,Refund,09/09/14,Credit,1166.01,323.24
+0568,Electric Bill,09/17/14,Debit,1401.20,2347.21
+0568,Gas Bill,09/23/14,Debit,311.78,8676.17
+0568,Wire Transfer,09/24/14,Credit,95.38,7802.55
+0568,Pharmacy,09/24/14,Debit,168.73,7414.05
+0568,Insurance Payment,10/01/14,Debit,1689.60,1103.73
+0568,Check Payment,10/22/14,Debit,741.67,4201.94
+0568,Online Payment,11/13/14,Debit,342.72,9902.31
+0568,Restaurant,11/13/14,Debit,642.24,335.84
+0568,Medical Payment,11/17/14,Debit,696.61,9588.97
+0568,Check Payment,11/18/14,Debit,582.97,3194.77
+0568,Direct Deposit,12/17/14,Credit,1109.45,2253.72
+0568,Credit Card Payment,12/19/14,Debit,642.25,8200.08
+0568,Gas Bill,12/27/14,Debit,939.85,2191.72
+0568,Insurance Payment,01/01/15,Debit,943.12,2079.18
+0568,Online Payment,01/05/15,Debit,281.33,1604.93
+0568,Phone Service,01/05/15,Debit,1551.32,3923.57
+0568,ATM Deposit,01/08/15,Credit,1474.31,4286.28
+0568,Phone Service,01/23/15,Debit,594.90,4397.12
+0568,Reimbursement,01/24/15,Credit,1572.34,5130.15
+0568,Gas Bill,02/14/15,Debit,821.27,1643.72
+0568,Interest Paid,03/20/15,Credit,1772.13,6766.34
+0568,Streaming Service,04/22/15,Debit,145.42,8183.16
+0568,Debit Card Purchase,04/26/15,Debit,401.96,4328.82
+0568,Mortgage Payment,05/20/15,Debit,1470.77,7116.32
+0568,Medical Payment,05/23/15,Debit,2.25,3006.12
+0568,Phone Service,05/30/15,Debit,73.41,275.95
+0568,Credit Card Payment,06/01/15,Debit,920.61,8132.37
+0568,Car Payment,06/03/15,Debit,1672.76,6115.51
+0568,Refund,06/23/15,Credit,1644.62,4245.65
+0568,Grocery Store,06/25/15,Debit,1768.98,1573.43
+0568,Medical Payment,06/30/15,Debit,1952.75,753.18
+0568,Interest Paid,07/05/15,Credit,1714.94,2535.13
+0568,Gas Bill,07/14/15,Debit,1804.02,6122.48
+0568,Gym Membership,07/15/15,Debit,952.80,1036.48
+0568,Electric Bill,07/19/15,Debit,1648.63,9145.13
+0568,Direct Deposit,08/18/15,Credit,1635.63,5475.80
+0568,Wire Transfer,09/02/15,Credit,1117.59,6518.84
+0568,Gym Membership,09/07/15,Debit,80.98,7889.22
+0568,Restaurant,09/29/15,Debit,1879.37,7945.44
+0568,Gym Membership,10/05/15,Debit,988.57,9342.02
+0568,Gym Membership,10/19/15,Debit,918.57,9066.97
+0568,Interest Paid,10/28/15,Credit,690.12,2193.83
+0568,Electric Bill,11/01/15,Debit,1462.86,2601.00
+0568,Wire Transfer,11/15/15,Credit,1039.60,4241.10
+0568,Wire Transfer,12/04/15,Credit,1234.96,1511.67
+0568,Transfer from Savings,01/03/16,Credit,985.09,5181.97
+0568,Gym Membership,01/05/16,Debit,820.77,4992.87
+0568,Car Payment,01/06/16,Debit,1292.95,6174.03
+0568,Reimbursement,01/29/16,Credit,1178.25,5019.56
+0568,Mobile Deposit,02/01/16,Credit,1168.56,8759.69
+0568,Rent Payment,02/09/16,Debit,1221.57,1533.18
+0568,Restaurant,02/11/16,Debit,1976.07,8656.88
+0568,ATM Deposit,02/20/16,Credit,1765.09,6417.21
+0568,Gas Bill,02/24/16,Debit,210.48,8346.20
+0568,Gas Station,02/26/16,Debit,931.92,3791.56
+0568,Online Payment,03/12/16,Debit,1808.58,7437.57
+0568,Rent Payment,03/19/16,Debit,1508.16,9120.08
+0568,Interest Paid,04/01/16,Credit,1413.85,8438.31
+0568,ATM Deposit,04/20/16,Credit,939.06,2361.46
+0568,Online Payment,04/25/16,Debit,885.00,707.19
+0568,Interest Paid,05/12/16,Credit,6.98,2531.58
+0568,ATM Deposit,05/30/16,Credit,1958.99,9864.44
+0568,Medical Payment,06/06/16,Debit,1878.30,106.12
+0568,Check Payment,06/13/16,Debit,1815.80,4773.84
+0568,Mobile Deposit,06/16/16,Credit,1717.21,5667.11
+0568,ATM Deposit,06/16/16,Credit,1729.75,3588.20
+0568,Payroll Deposit,06/28/16,Credit,137.81,2523.79
+0568,Refund,07/13/16,Credit,912.50,3231.21
+0568,Mobile Deposit,07/22/16,Credit,646.17,1059.22
+0568,Electric Bill,08/03/16,Debit,1535.50,5284.69
+0568,Debit Card Purchase,08/05/16,Debit,407.64,6262.77
+0568,ATM Deposit,08/22/16,Credit,1359.88,5894.02
+0568,Interest Paid,08/31/16,Credit,979.86,2647.57
+0568,Check Payment,09/11/16,Debit,198.92,8418.09
+0568,Restaurant,09/13/16,Debit,381.03,8656.35
+0568,Rent Payment,09/24/16,Debit,982.95,7911.59
+0568,Credit Card Payment,09/24/16,Debit,1015.71,2249.15
+0568,Phone Service,10/03/16,Debit,500.30,7357.26
+0568,Transfer from Savings,10/04/16,Credit,565.35,5574.13
+0568,Streaming Service,10/05/16,Debit,874.65,8669.81
+0568,Reimbursement,10/15/16,Credit,228.31,1803.60
+0568,Reimbursement,10/22/16,Credit,595.00,2554.43
+0568,ATM Deposit,10/22/16,Credit,1901.00,4664.86
+0568,Gas Station,10/24/16,Debit,1435.59,2703.68
+0568,Grocery Store,10/31/16,Debit,1889.45,658.48
+0568,Credit Card Payment,11/11/16,Debit,487.88,7567.35
+0568,Direct Deposit,11/25/16,Credit,828.44,6970.99
+0568,Phone Service,12/01/16,Debit,1080.42,3035.39
+0568,Restaurant,12/18/16,Debit,6.97,9903.60
+0568,Payroll Deposit,12/18/16,Credit,1449.03,7451.60
+0568,Electric Bill,12/28/16,Debit,1629.26,5075.39
+0568,Mortgage Payment,01/21/17,Debit,381.08,5800.12
+0568,Pharmacy,01/23/17,Debit,1998.30,5636.79
+0568,Payroll Deposit,01/29/17,Credit,631.26,5770.25
+0568,ATM Withdrawal,02/27/17,Debit,1360.18,8590.50
+0568,Restaurant,03/25/17,Debit,200.84,1885.04
+0568,Phone Service,03/30/17,Debit,327.48,8877.81
+0568,Wire Transfer,04/03/17,Credit,564.01,972.21
+0568,Debit Card Purchase,04/03/17,Debit,545.44,1971.83
+0568,Electric Bill,04/05/17,Debit,847.30,8749.00
+0568,ATM Withdrawal,04/06/17,Debit,149.63,5383.06
+0568,Credit Card Payment,04/08/17,Debit,504.97,9338.61
+0568,Payroll Deposit,04/14/17,Credit,374.55,3775.58
+0568,Gas Station,04/19/17,Debit,708.43,1354.05
+0568,ATM Deposit,05/01/17,Credit,996.91,8594.93
+0568,Electric Bill,05/04/17,Debit,966.01,1468.88
+0568,Reimbursement,05/29/17,Credit,1723.34,125.34
+0568,Rent Payment,05/29/17,Debit,1511.55,4483.33
+0568,Electric Bill,06/01/17,Debit,1546.93,5995.14
+0568,Grocery Store,06/01/17,Debit,1024.65,1698.87
+0568,Gym Membership,06/16/17,Debit,724.32,319.09
+0568,Mortgage Payment,06/30/17,Debit,708.88,5539.77
+0568,Debit Card Purchase,07/04/17,Debit,225.35,7588.07
+0568,Refund,07/13/17,Credit,1661.91,8522.09
+0568,Car Payment,07/17/17,Debit,1885.87,3536.62
+0568,Restaurant,07/19/17,Debit,435.53,8920.31
+0568,Debit Card Purchase,07/29/17,Debit,410.99,4651.24
+0568,Internet Service,08/12/17,Debit,1786.88,1872.36
+0568,Refund,08/17/17,Credit,662.21,3425.03
+0568,Restaurant,08/18/17,Debit,1435.20,9530.37
+0568,Medical Payment,08/20/17,Debit,1647.60,3588.29
+0568,Online Payment,09/10/17,Debit,1407.12,3126.82
+0568,Gas Station,09/16/17,Debit,1370.49,2677.13
+0568,Mobile Deposit,10/22/17,Credit,488.56,9421.32
+0568,Interest Paid,11/15/17,Credit,1788.93,1066.44
+0568,Credit Card Payment,11/23/17,Debit,1681.32,6229.85
+0568,ATM Deposit,12/02/17,Credit,887.27,983.66
+0568,Wire Transfer,12/08/17,Credit,1166.86,2226.38
+0568,Debit Card Purchase,12/09/17,Debit,945.37,2762.20
+0568,Rent Payment,12/11/17,Debit,227.26,2598.19
+0568,Interest Paid,12/12/17,Credit,1712.34,4057.12
+0568,Rent Payment,12/22/17,Debit,670.34,161.12
+0568,Grocery Store,12/27/17,Debit,1284.54,3252.53
+0568,Car Payment,12/31/17,Debit,1945.67,430.00
+0568,Gym Membership,01/13/18,Debit,310.94,5933.16
+0568,Insurance Payment,01/14/18,Debit,1219.96,9652.04
+0568,Rent Payment,01/26/18,Debit,1759.42,9012.94
+0568,Insurance Payment,01/26/18,Debit,1384.62,8973.31
+0568,Reimbursement,01/31/18,Credit,864.19,5812.39
+0568,Gas Bill,02/07/18,Debit,275.86,6707.92
+0568,Credit Card Payment,02/08/18,Debit,722.29,6689.94
+0568,Gas Station,02/25/18,Debit,1280.61,9828.89
+0568,Gas Station,02/28/18,Debit,18.91,4203.26
+0568,Direct Deposit,02/28/18,Credit,280.08,6570.16
+0568,Mortgage Payment,03/02/18,Debit,34.79,6963.98
+0568,Rent Payment,03/02/18,Debit,1415.29,3272.42
+0568,Debit Card Purchase,03/09/18,Debit,194.22,3865.62
+0568,Phone Service,03/15/18,Debit,1855.79,4021.16
+0568,ATM Deposit,03/26/18,Credit,1005.46,7573.58
+0568,Car Payment,04/15/18,Debit,157.21,263.13
+0568,Insurance Payment,04/22/18,Debit,1203.83,7832.85
+0568,Check Payment,04/23/18,Debit,359.17,3493.97
+0568,Internet Service,05/08/18,Debit,1068.90,985.33
+0568,Gas Station,05/11/18,Debit,1011.36,5681.11
+0568,Rent Payment,05/16/18,Debit,1826.26,7539.73
+0568,Direct Deposit,05/23/18,Credit,963.23,2899.43
+0568,Payroll Deposit,06/14/18,Credit,1331.27,2636.84
+0568,Interest Paid,06/26/18,Credit,48.22,3153.31
+0568,Internet Service,06/27/18,Debit,768.34,7880.56
+0568,Gas Station,07/02/18,Debit,225.32,3664.20
+0568,Transfer from Savings,07/20/18,Credit,630.14,967.14
+0568,Phone Service,07/20/18,Debit,283.93,4970.83
+0568,Phone Service,07/23/18,Debit,1802.40,9395.44
+0568,Pharmacy,07/26/18,Debit,808.95,3714.84
+0568,Gas Bill,08/24/18,Debit,1833.65,7024.00
+0568,Check Payment,09/02/18,Debit,306.78,3443.97
+0568,Check Payment,09/11/18,Debit,1870.34,4654.43
+0568,Streaming Service,09/13/18,Debit,1661.30,2118.22
+0568,Credit Card Payment,09/19/18,Debit,271.69,815.52
+0568,Wire Transfer,09/22/18,Credit,942.25,2557.16
+0568,Reimbursement,09/23/18,Credit,150.91,7839.89
+0568,Refund,09/24/18,Credit,1924.76,5403.53
+0568,Rent Payment,10/03/18,Debit,1456.01,1025.35
+0568,Interest Paid,10/13/18,Credit,112.94,3315.74
+0568,Gas Station,10/13/18,Debit,1008.05,9253.51
+0568,Car Payment,10/17/18,Debit,1605.60,1940.79
+0568,Phone Service,10/21/18,Debit,940.74,8248.92
+0568,Gym Membership,10/29/18,Debit,512.28,9112.37
+0568,ATM Withdrawal,11/02/18,Debit,1478.78,7332.01
+0568,Transfer from Savings,11/08/18,Credit,269.00,2956.91
+0568,Transfer from Savings,11/20/18,Credit,1984.78,9574.54
+0568,Car Payment,11/25/18,Debit,312.27,4125.38
+0568,Rent Payment,12/02/18,Debit,1927.01,6121.35
+0568,Pharmacy,12/09/18,Debit,1354.80,9481.90
+0568,Check Payment,12/10/18,Debit,861.32,5608.69
+0568,Streaming Service,12/10/18,Debit,480.58,8172.02
+0568,Debit Card Purchase,12/13/18,Debit,724.81,5995.99
+0568,Streaming Service,12/14/18,Debit,1059.50,9455.43
+0568,Insurance Payment,01/15/19,Debit,1704.47,8120.97
+0568,Direct Deposit,02/02/19,Credit,1603.20,4968.34
+0568,Gas Bill,02/04/19,Debit,329.18,2702.87
+0568,Online Payment,03/14/19,Debit,1712.29,6373.50
+0568,Interest Paid,03/16/19,Credit,1245.22,8007.27
+0568,Restaurant,03/19/19,Debit,638.14,6352.60
+0568,Grocery Store,03/19/19,Debit,445.88,5276.21
+0568,Mortgage Payment,04/03/19,Debit,269.19,1798.78
+0568,Mortgage Payment,04/11/19,Debit,79.07,6644.67
+0568,ATM Deposit,04/25/19,Credit,282.32,8435.13
+0568,Rent Payment,04/26/19,Debit,747.07,1409.01
+0568,Car Payment,04/27/19,Debit,314.39,7342.09
+0568,Mortgage Payment,05/15/19,Debit,544.85,6679.55
+0568,Online Payment,05/26/19,Debit,1604.07,6572.32
+0568,Insurance Payment,05/29/19,Debit,1893.62,8263.64
+0568,Rent Payment,06/02/19,Debit,428.03,8117.16
+0568,Interest Paid,06/16/19,Credit,369.28,367.77
+0568,Phone Service,06/17/19,Debit,961.42,2782.65
+0568,Reimbursement,06/21/19,Credit,1506.21,1582.41
+0568,Car Payment,06/25/19,Debit,1879.40,8885.83
+0568,ATM Deposit,06/25/19,Credit,597.45,3405.53
+0568,Pharmacy,06/29/19,Debit,705.63,4993.58
+0568,Interest Paid,06/29/19,Credit,1406.81,6655.48
+0568,Mortgage Payment,07/21/19,Debit,228.24,3142.77
+0568,Electric Bill,07/24/19,Debit,264.22,3553.57
+0568,Refund,07/30/19,Credit,994.85,4871.96
+0568,Gym Membership,08/05/19,Debit,1830.41,2071.85
+0568,Debit Card Purchase,08/07/19,Debit,1503.19,1752.99
+0568,Refund,08/15/19,Credit,1110.35,2569.78
+0568,Credit Card Payment,08/20/19,Debit,1575.86,845.05
+0568,Direct Deposit,09/01/19,Credit,1785.00,1479.44
+0568,Debit Card Purchase,09/04/19,Debit,1976.00,1858.36
+0568,Check Payment,09/05/19,Debit,1433.18,9504.15
+0568,Refund,09/10/19,Credit,270.15,8189.19
+0568,Restaurant,09/10/19,Debit,693.79,4780.62
+0568,Refund,09/10/19,Credit,183.63,3896.54
+0568,ATM Withdrawal,09/12/19,Debit,1704.78,7766.27
+0568,Insurance Payment,09/16/19,Debit,1613.09,7502.28
+0568,ATM Deposit,09/17/19,Credit,792.86,4997.24
+0568,Transfer from Savings,09/22/19,Credit,38.90,6133.25
+0568,Insurance Payment,09/28/19,Debit,544.44,5904.92
+0568,ATM Withdrawal,10/04/19,Debit,140.93,9035.04
+0568,Gas Station,10/04/19,Debit,321.88,8626.68
+0568,Mobile Deposit,10/06/19,Credit,189.67,9697.02
+0568,Rent Payment,10/06/19,Debit,44.01,4891.89
+0568,Phone Service,10/29/19,Debit,529.67,6571.90
+0568,Internet Service,11/08/19,Debit,1710.38,4659.08
+0568,Refund,11/09/19,Credit,1822.74,702.96
+0568,Streaming Service,11/11/19,Debit,1754.24,4845.79
+0568,Gym Membership,11/19/19,Debit,128.67,8602.75
+0568,Insurance Payment,11/26/19,Debit,1026.85,456.40
+0568,Car Payment,12/04/19,Debit,797.91,3249.68
+0568,Mobile Deposit,12/08/19,Credit,353.20,4356.40
+0568,Rent Payment,12/21/19,Debit,1430.80,2884.78
+0568,Car Payment,12/27/19,Debit,1727.05,562.98
+0568,Car Payment,12/27/19,Debit,1134.70,332.58
+0568,Gas Bill,01/04/20,Debit,1483.66,7138.09
+0568,Grocery Store,01/05/20,Debit,570.08,7784.09
+0568,Gas Bill,01/07/20,Debit,1811.16,2271.92
+0568,Interest Paid,01/21/20,Credit,846.77,4323.49
+0568,ATM Withdrawal,02/03/20,Debit,660.32,4133.16
+0568,Phone Service,02/10/20,Debit,457.77,2974.75
+0568,Pharmacy,02/27/20,Debit,1623.81,4360.20
+0568,Credit Card Payment,02/29/20,Debit,973.56,5047.90
+0568,Check Payment,03/01/20,Debit,849.75,8961.14
+0568,Phone Service,03/18/20,Debit,1172.09,7292.97
+0568,ATM Deposit,03/18/20,Credit,184.18,4812.31
+0568,Restaurant,03/30/20,Debit,1035.67,3910.36
+0568,Interest Paid,04/04/20,Credit,764.11,1652.12
+0568,Streaming Service,05/14/20,Debit,1432.45,9332.84
+0568,ATM Withdrawal,05/15/20,Debit,1560.45,4914.97
+0568,Streaming Service,05/17/20,Debit,1592.16,6059.92
+0568,Check Payment,05/24/20,Debit,402.27,8869.48
+0568,Direct Deposit,06/07/20,Credit,1473.51,5807.67
+0568,Gas Station,06/16/20,Debit,922.02,9401.16
+0568,Reimbursement,06/25/20,Credit,543.00,5434.11
+0568,Gas Bill,07/06/20,Debit,1551.26,6470.71
+0568,Gym Membership,07/12/20,Debit,782.09,990.27
+0568,Reimbursement,07/13/20,Credit,636.77,4601.65
+0568,ATM Deposit,08/06/20,Credit,1288.65,2834.25
+0568,Check Payment,08/13/20,Debit,1829.15,8505.66
+0568,Credit Card Payment,08/17/20,Debit,351.85,3065.33
+0568,Transfer from Savings,09/12/20,Credit,1003.13,9208.72
+0568,ATM Deposit,09/13/20,Credit,1236.50,4025.47
+0568,Wire Transfer,09/23/20,Credit,1241.34,1728.53
+0568,Direct Deposit,09/27/20,Credit,34.35,9203.35
+0568,Interest Paid,10/13/20,Credit,921.07,7039.40
+0568,Check Payment,11/04/20,Debit,807.07,3818.21
+0568,Pharmacy,11/07/20,Debit,1404.62,1184.62
+0568,Debit Card Purchase,11/09/20,Debit,1426.56,2486.01
+0568,Insurance Payment,11/13/20,Debit,1856.42,1503.83
+0568,Refund,11/17/20,Credit,1465.91,7120.16
+0568,Streaming Service,11/18/20,Debit,957.26,1797.77
+0568,Wire Transfer,11/19/20,Credit,784.38,7094.34
+0568,Online Payment,11/20/20,Debit,1364.98,3783.24
+0568,Transfer from Savings,12/04/20,Credit,1445.45,7665.89
+0568,Insurance Payment,01/01/21,Debit,1667.13,2033.78
+0568,Streaming Service,01/02/21,Debit,647.94,868.39
+0568,Reimbursement,01/04/21,Credit,1077.56,2105.88
+0568,Refund,01/06/21,Credit,1479.64,4192.90
+0568,Rent Payment,01/28/21,Debit,777.31,102.26
+0568,Gym Membership,02/02/21,Debit,684.02,8503.10
+0568,Pharmacy,02/02/21,Debit,1118.46,8427.75
+0568,Credit Card Payment,02/10/21,Debit,1094.52,4855.20
+0568,Credit Card Payment,02/13/21,Debit,1700.59,7416.73
+0568,Restaurant,02/20/21,Debit,383.45,7036.77
+0568,Car Payment,02/23/21,Debit,1226.44,7907.54
+0568,Rent Payment,02/27/21,Debit,1370.15,7768.37
+0568,Wire Transfer,03/06/21,Credit,1321.20,3883.20
+0568,Pharmacy,03/08/21,Debit,326.57,7869.75
+0568,Phone Service,03/12/21,Debit,1045.60,8239.71
+0568,Gym Membership,03/22/21,Debit,1321.57,4448.50
+0568,Streaming Service,03/26/21,Debit,724.58,1827.22
+0568,ATM Withdrawal,04/03/21,Debit,1677.56,8326.76
+0568,Gas Station,04/08/21,Debit,776.59,9234.48
+0568,Internet Service,04/11/21,Debit,569.83,4389.90
+0568,Medical Payment,04/21/21,Debit,1459.75,5609.66
+0568,Gas Bill,04/22/21,Debit,1112.47,7937.82
+0568,Refund,04/22/21,Credit,381.96,7298.13
+0568,ATM Withdrawal,04/25/21,Debit,162.70,2185.19
+0568,Restaurant,04/26/21,Debit,535.21,3187.33
+0568,Medical Payment,05/01/21,Debit,1123.30,3084.92
+0568,Gas Bill,05/02/21,Debit,267.44,8597.96
+0568,Refund,05/20/21,Credit,1923.49,1068.41
+0568,Rent Payment,06/06/21,Debit,1508.05,6723.62
+0568,Internet Service,06/07/21,Debit,340.24,3648.82
+0568,Payroll Deposit,06/10/21,Credit,1666.15,9502.34
+0568,Rent Payment,06/11/21,Debit,138.37,237.78
+0568,Check Payment,06/19/21,Debit,908.33,7289.21
+0568,Grocery Store,06/21/21,Debit,15.28,3715.91
+0568,Medical Payment,06/25/21,Debit,840.45,2554.50
+0568,ATM Withdrawal,06/30/21,Debit,1155.65,1474.22
+0568,Refund,07/20/21,Credit,1111.23,1579.61
+0568,Medical Payment,07/31/21,Debit,244.98,8876.46
+0568,Restaurant,08/04/21,Debit,119.05,7851.61
+0568,Transfer from Savings,08/07/21,Credit,102.04,7235.79
+0568,Rent Payment,08/08/21,Debit,6.50,8796.33
+0568,Direct Deposit,08/11/21,Credit,614.25,1386.14
+0568,Interest Paid,08/16/21,Credit,1434.34,2650.99
+0568,Gym Membership,08/16/21,Debit,1142.51,1754.43
+0568,Reimbursement,08/18/21,Credit,537.38,646.19
+0568,Medical Payment,09/01/21,Debit,599.09,3801.73
+0568,Direct Deposit,09/10/21,Credit,1820.11,5150.03
+0568,Grocery Store,09/11/21,Debit,891.74,9525.34
+0568,Gym Membership,09/14/21,Debit,1401.18,4389.24
+0568,Transfer from Savings,09/16/21,Credit,102.89,7704.09
+0568,Payroll Deposit,09/19/21,Credit,1905.80,9765.58
+0568,Mortgage Payment,09/25/21,Debit,1573.98,1004.17
+0568,Debit Card Purchase,10/29/21,Debit,982.83,3496.27
+0568,Refund,10/31/21,Credit,222.36,2146.96
+0568,Debit Card Purchase,10/31/21,Debit,1308.42,3525.10
+0568,ATM Deposit,11/26/21,Credit,1372.56,7191.15
+0568,Gas Station,12/08/21,Debit,1150.02,4632.13
+0568,Streaming Service,12/08/21,Debit,241.87,8631.77
+0568,Restaurant,12/21/21,Debit,1111.90,6000.76
+0568,Gas Station,12/24/21,Debit,737.46,3446.53
+0568,Internet Service,12/27/21,Debit,701.21,3156.56
+0568,Restaurant,12/30/21,Debit,86.35,1812.38
+0568,Refund,12/31/21,Credit,1531.81,6533.16
+0568,Wire Transfer,01/31/22,Credit,1110.15,6807.16
+0568,Gas Bill,03/02/22,Debit,770.61,930.91
+0568,Car Payment,03/04/22,Debit,1511.88,7614.23
+0568,Internet Service,03/06/22,Debit,1033.90,6009.42
+0568,Rent Payment,03/19/22,Debit,269.84,8390.95
+0568,Payroll Deposit,03/20/22,Credit,1993.29,5809.65
+0568,Rent Payment,03/27/22,Debit,190.27,3378.50
+0568,ATM Deposit,04/02/22,Credit,1635.95,7583.48
+0568,Refund,04/10/22,Credit,906.38,3984.84
+0568,Interest Paid,04/15/22,Credit,1483.37,8708.20
+0568,ATM Withdrawal,04/24/22,Debit,476.50,6664.13
+0568,Gas Bill,05/14/22,Debit,1062.42,5409.57
+0568,Gas Station,05/28/22,Debit,656.32,4765.41
+0568,Direct Deposit,05/29/22,Credit,1939.42,8681.08
+0568,Interest Paid,06/25/22,Credit,95.61,3942.07
+0568,Streaming Service,06/29/22,Debit,70.99,4287.91
+0568,Mobile Deposit,07/06/22,Credit,1526.00,8797.63
+0568,Internet Service,07/10/22,Debit,834.13,9129.08
+0568,Car Payment,07/18/22,Debit,1306.01,2612.42
+0568,Refund,07/23/22,Credit,1926.16,3728.07
+0568,Grocery Store,08/01/22,Debit,1109.51,6835.12
+0568,Payroll Deposit,08/02/22,Credit,817.48,5661.41
+0568,Phone Service,08/04/22,Debit,1860.66,6623.05
+0568,Refund,08/12/22,Credit,256.30,2348.30
+0568,Gas Station,08/16/22,Debit,1639.03,5486.93
+0568,Gas Station,08/20/22,Debit,1243.79,127.97
+0568,Internet Service,08/20/22,Debit,1939.12,1433.70
+0568,Gym Membership,08/23/22,Debit,1954.99,5867.63
+0568,Phone Service,08/27/22,Debit,1754.52,3308.27
+0568,Online Payment,08/27/22,Debit,1952.15,9385.30
+0568,Mobile Deposit,09/25/22,Credit,1747.66,1892.71
+0568,Mobile Deposit,10/04/22,Credit,373.64,2893.32
+0568,Direct Deposit,10/05/22,Credit,140.59,4278.46
+0568,Rent Payment,10/25/22,Debit,1388.86,9232.93
+0568,Debit Card Purchase,11/02/22,Debit,1947.20,6407.10
+0568,Gym Membership,11/03/22,Debit,569.35,6110.97
+0568,Car Payment,11/04/22,Debit,553.43,4449.95
+0568,Restaurant,12/01/22,Debit,1757.50,2534.84
+0568,ATM Deposit,12/04/22,Credit,895.38,2685.93
+0568,Grocery Store,12/09/22,Debit,37.84,6166.06
+0568,Restaurant,12/11/22,Debit,1020.01,8149.48
+0568,Car Payment,12/15/22,Debit,10.16,4602.43
+0568,Car Payment,12/22/22,Debit,1613.04,1505.98
+0568,Grocery Store,12/24/22,Debit,1024.79,212.25
+0568,Mobile Deposit,01/05/23,Credit,894.42,6423.05
+0568,Insurance Payment,01/08/23,Debit,1964.22,6400.62
+0568,Streaming Service,01/15/23,Debit,57.92,3360.01
+0568,Mortgage Payment,01/20/23,Debit,233.77,3989.14
+0568,Gym Membership,03/02/23,Debit,270.53,510.88
+0568,Online Payment,03/07/23,Debit,224.15,1238.14
+0568,Credit Card Payment,03/10/23,Debit,873.47,2315.62
+0568,Wire Transfer,03/12/23,Credit,1460.83,4361.06
+0568,Electric Bill,03/16/23,Debit,1806.96,1552.03
+0568,Insurance Payment,03/20/23,Debit,606.42,2162.56
+0568,Medical Payment,03/21/23,Debit,1883.74,1705.55
+0568,Medical Payment,03/30/23,Debit,1134.79,2148.71
+0568,Debit Card Purchase,04/19/23,Debit,1636.80,6989.05
+0568,Credit Card Payment,04/28/23,Debit,714.86,2483.12
+0568,Restaurant,05/02/23,Debit,1733.55,1724.03
+0568,Internet Service,05/04/23,Debit,870.09,9828.13
+0568,ATM Deposit,05/09/23,Credit,1155.45,2957.16
+0568,Credit Card Payment,05/11/23,Debit,469.16,7561.99
+0568,Gas Bill,05/22/23,Debit,55.32,9605.70
+0568,Online Payment,05/28/23,Debit,1312.02,9334.48
+0568,Restaurant,06/04/23,Debit,174.09,7688.61
+0568,Refund,06/17/23,Credit,55.03,5238.15
+0568,Restaurant,06/21/23,Debit,1297.27,5105.26
+0568,Medical Payment,06/25/23,Debit,708.48,3147.60
+0568,Interest Paid,06/28/23,Credit,785.64,9116.13
+0568,Streaming Service,06/29/23,Debit,946.76,996.60
+0568,Debit Card Purchase,07/03/23,Debit,1402.30,6649.50
+0568,Interest Paid,07/07/23,Credit,1475.38,1945.40
+0568,Interest Paid,07/09/23,Credit,265.26,3438.61
+0568,Wire Transfer,07/10/23,Credit,289.18,209.04
+0568,ATM Withdrawal,07/27/23,Debit,356.56,9731.00
+0568,Credit Card Payment,08/07/23,Debit,821.24,8380.30
+0568,Online Payment,08/07/23,Debit,950.32,463.51
+0568,Pharmacy,08/10/23,Debit,267.14,2219.22
+0568,Restaurant,08/21/23,Debit,390.81,8740.56
+0568,Insurance Payment,08/27/23,Debit,1897.04,339.87
+0568,Payroll Deposit,08/30/23,Credit,772.85,6977.46
+0568,Online Payment,08/31/23,Debit,1005.63,3932.14
+0568,Car Payment,09/14/23,Debit,298.72,6197.99
+0568,Interest Paid,09/25/23,Credit,1997.93,7374.52
+0568,Refund,10/13/23,Credit,1933.60,7037.14
+0568,Gas Bill,10/26/23,Debit,1423.43,1868.81
+0568,Mortgage Payment,10/28/23,Debit,320.42,4165.75
+0568,Restaurant,11/06/23,Debit,810.70,672.16
+0568,Car Payment,11/13/23,Debit,1576.16,1175.58
+0568,Electric Bill,12/07/23,Debit,404.12,6258.63
+0568,Direct Deposit,12/12/23,Credit,1580.41,2406.79
+0568,ATM Withdrawal,12/16/23,Debit,1206.34,6009.10
+0568,Streaming Service,12/30/23,Debit,353.21,2129.38
+0568,Car Payment,01/23/24,Debit,14.58,7620.23
+0568,Gas Station,02/04/24,Debit,682.37,4878.68
+0568,Rent Payment,02/12/24,Debit,1416.72,3601.19
+0568,Insurance Payment,02/13/24,Debit,1369.59,5501.84
+0568,Wire Transfer,03/11/24,Credit,1557.81,6772.29
+0568,Debit Card Purchase,03/11/24,Debit,683.73,1102.75
+0568,Credit Card Payment,03/17/24,Debit,1894.43,9990.79
+0568,ATM Deposit,03/30/24,Credit,930.48,4835.51
+0568,ATM Deposit,04/04/24,Credit,1640.61,656.53
+0568,Pharmacy,04/10/24,Debit,1932.14,5167.79
+0568,Streaming Service,05/02/24,Debit,346.00,613.33
+0568,Electric Bill,05/16/24,Debit,1114.29,8837.85
+0568,Refund,05/25/24,Credit,1694.18,8707.31
+0568,Restaurant,06/01/24,Debit,1116.37,8424.04
+0568,ATM Withdrawal,06/03/24,Debit,715.61,5740.56
+0568,Rent Payment,06/12/24,Debit,1286.37,9442.21
+0568,Gym Membership,06/16/24,Debit,510.52,8831.70
+0568,Pharmacy,06/21/24,Debit,1649.66,2959.15
+0568,Streaming Service,06/22/24,Debit,93.58,6633.18
+0568,Mortgage Payment,06/25/24,Debit,586.04,6067.49
+0568,ATM Withdrawal,06/28/24,Debit,1615.86,9181.10
+0568,Medical Payment,06/29/24,Debit,582.36,849.39
+0568,Grocery Store,07/06/24,Debit,1055.98,8587.49
+0568,Online Payment,07/22/24,Debit,1674.53,6981.23
+0568,Insurance Payment,07/28/24,Debit,1426.39,3513.82
+0568,ATM Withdrawal,08/06/24,Debit,123.81,9035.46
+0568,Debit Card Purchase,08/11/24,Debit,711.05,7732.37
+0568,Gas Station,08/21/24,Debit,134.15,9864.56
+0568,Credit Card Payment,08/27/24,Debit,1750.03,469.90
+0568,Debit Card Purchase,08/29/24,Debit,1863.03,2515.06
+0568,ATM Withdrawal,08/30/24,Debit,1369.37,3723.06
+0568,Rent Payment,09/07/24,Debit,216.91,9713.80
+0568,Gas Bill,09/13/24,Debit,397.67,5483.84
+0568,Restaurant,09/14/24,Debit,816.70,8435.55
+0568,Refund,09/19/24,Credit,430.16,6050.81
+0568,Medical Payment,09/20/24,Debit,704.46,5086.75
+0568,Internet Service,09/21/24,Debit,269.17,1742.07
+0568,Mortgage Payment,09/22/24,Debit,1458.39,4465.87
+0568,Payroll Deposit,10/06/24,Credit,62.51,7328.29
+0568,Rent Payment,10/07/24,Debit,1227.26,1325.43
+0568,ATM Deposit,10/09/24,Credit,1420.32,7786.48
+0568,Gym Membership,10/19/24,Debit,1777.25,3074.12
+0568,Pharmacy,10/20/24,Debit,276.13,6189.29
+0568,Interest Paid,10/30/24,Credit,1085.92,3573.06
+0568,Interest Paid,11/05/24,Credit,743.85,9328.49
+0568,Electric Bill,11/10/24,Debit,1128.38,6083.86
+0568,Car Payment,11/11/24,Debit,1518.07,3480.03
+0568,Restaurant,11/12/24,Debit,1793.69,5831.27
+0568,Grocery Store,11/13/24,Debit,629.45,7006.61
+0568,Mobile Deposit,11/13/24,Credit,1964.96,3944.41
+0568,Insurance Payment,11/29/24,Debit,1862.92,5419.20
+0568,Streaming Service,12/03/24,Debit,309.15,2584.20
+0568,Electric Bill,12/06/24,Debit,1451.54,6463.08
+0568,Check Payment,12/07/24,Debit,1676.36,3267.95
+0568,ATM Deposit,12/08/24,Credit,297.24,538.94
+0568,Restaurant,12/14/24,Debit,668.90,6694.03
+0568,Gym Membership,12/24/24,Debit,828.23,6361.80
+0568,Direct Deposit,12/31/24,Credit,434.33,3475.33
+0568,Gas Bill,01/02/25,Debit,1264.06,157.46
+0568,Interest Paid,01/04/25,Credit,1599.51,4477.75
+0568,Online Payment,01/11/25,Debit,1378.21,5296.56
+0568,Streaming Service,01/13/25,Debit,1337.66,8380.06
+0568,Phone Service,01/13/25,Debit,977.99,9683.84
+0568,Electric Bill,01/17/25,Debit,1705.46,9110.76
+0568,Pharmacy,01/20/25,Debit,1556.73,6093.25
+0568,Gas Bill,01/20/25,Debit,403.72,4045.64
+0568,Pharmacy,02/05/25,Debit,108.03,7862.74
+0568,ATM Withdrawal,02/19/25,Debit,371.01,7739.25
+0568,Medical Payment,02/26/25,Debit,1002.39,4505.35
+0568,ATM Deposit,02/28/25,Credit,1551.82,8287.87
+0568,Refund,03/01/25,Credit,1671.20,2846.82
+0568,Gas Bill,03/18/25,Debit,387.55,9739.32
+0568,Direct Deposit,03/20/25,Credit,1100.62,7762.61
+0568,Rent Payment,03/26/25,Debit,1445.00,855.49
+0568,Refund,04/01/25,Credit,153.24,5997.65
+0568,Pharmacy,04/03/25,Debit,50.36,9831.67
+0568,Gym Membership,04/07/25,Debit,421.31,6393.90
+0568,Mobile Deposit,04/11/25,Credit,1227.65,8278.28
+0568,Refund,04/11/25,Credit,1753.86,3834.69
+0568,Gas Bill,04/13/25,Debit,487.35,8160.01
+0568,Reimbursement,04/16/25,Credit,335.84,2186.50
+0568,Mobile Deposit,04/27/25,Credit,532.43,1732.43
+0568,Direct Deposit,04/29/25,Credit,904.37,3579.63
+0568,Medical Payment,04/29/25,Debit,1813.40,7312.58
+0568,Gas Station,05/04/25,Debit,814.88,145.79
+0568,Mortgage Payment,05/04/25,Debit,1403.20,162.92
+0568,Car Payment,05/08/25,Debit,1698.73,2303.22
+0568,Debit Card Purchase,05/10/25,Debit,1169.40,987.63
+0568,Wire Transfer,05/12/25,Credit,34.82,767.40
+0568,Online Payment,05/15/25,Debit,636.42,7205.76
+0568,Gas Station,05/28/25,Debit,265.59,4534.31
+0568,Phone Service,06/03/25,Debit,1768.45,9081.98
+0568,Streaming Service,06/03/25,Debit,185.52,8010.40
+0568,Payroll Deposit,06/20/25,Credit,153.71,4169.41
+0568,Credit Card Payment,06/20/25,Debit,1152.94,1574.70
+0568,Insurance Payment,06/23/25,Debit,800.01,4018.55
+0568,Medical Payment,07/01/25,Debit,437.79,5167.77
+0568,Check Payment,07/06/25,Debit,706.54,653.25
+0568,Grocery Store,07/10/25,Debit,824.97,6143.84
+0568,Gas Bill,07/30/25,Debit,611.05,7367.51
+0568,Electric Bill,08/02/25,Debit,1721.39,5852.21
+0568,Streaming Service,08/02/25,Debit,999.55,1160.56
+0568,Restaurant,08/05/25,Debit,281.49,426.52
+0568,Pharmacy,08/11/25,Debit,1675.08,1967.49
+0568,Wire Transfer,08/17/25,Credit,855.30,9298.02
+0568,Mobile Deposit,08/20/25,Credit,1346.71,1287.86
+0568,Gas Station,08/24/25,Debit,203.56,9442.23
+0568,Reimbursement,08/25/25,Credit,756.09,509.94
+0568,Restaurant,08/26/25,Debit,312.02,2441.40
+0568,Car Payment,09/02/25,Debit,109.77,2557.96
+0568,Online Payment,09/17/25,Debit,139.12,8718.26
+0568,Gym Membership,09/25/25,Debit,911.40,5436.06
+0568,Pharmacy,10/30/25,Debit,1391.11,6629.73
+0568,Restaurant,10/30/25,Debit,303.59,8026.53
+0568,Phone Service,11/02/25,Debit,1994.11,8529.74
