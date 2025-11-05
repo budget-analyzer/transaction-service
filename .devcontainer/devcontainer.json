@@ -1,0 +1,15 @@
+{
+  "name": "budget-analyzer-api",
+  "dockerComposeFile": "../../budget-analyzer/claude-code-sandbox/docker-compose.yml",
+  "service": "claude-dev",
+  "workspaceFolder": "/workspace/budget-analyzer-api",
+  "shutdownAction": "none",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code"
+      ]
+    }
+  }
+}
