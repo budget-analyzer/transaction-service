@@ -371,7 +371,7 @@ The service layer should **trust** that the controller layer has validated reque
 
 **Spotless Configuration:**
 - Google Java Format (1.17.0)
-- Automatic import ordering: java → javax → jakarta → org → com → com.bleurubin
+- Automatic import ordering: java → javax → jakarta → org → com → org.budgetanalyzer
 - Trailing whitespace removal
 - File ends with newline
 - Unused import removal
@@ -632,7 +632,7 @@ budget-analyzer:
 
 ### Transaction Entity
 
-**Location:** [domain/Transaction.java](src/main/java/com/bleurubin/budgetanalyzer/domain/Transaction.java)
+**Location:** [domain/Transaction.java](src/main/java/org/budgetanalyzer/budgetanalyzer/domain/Transaction.java)
 
 Extends `SoftDeletableEntity` from `service-common` dependency.
 
@@ -1078,14 +1078,14 @@ When working on this project:
 **Example Response Pattern:**
 ```
 Build completed successfully, but found Checkstyle warnings:
-- File: src/main/java/com/bleurubin/service/Example.java:42
+- File: src/main/java/org/budgetanalyzer/service/Example.java:42
 - Issue: Javadoc comment missing period at end of first sentence
 - Action: Fixed by adding period to Javadoc summary
 
 OR
 
 Build completed with Checkstyle warnings that I cannot resolve:
-- File: src/main/java/com/bleurubin/service/Example.java:42
+- File: src/main/java/org/budgetanalyzer/service/Example.java:42
 - Warning: [specific warning message]
 - Reason: [explanation of why it cannot be fixed]
 ```
