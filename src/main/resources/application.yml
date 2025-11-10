@@ -101,6 +101,7 @@ budget-analyzer:
       include-response-body: true
       max-body-size: 10000
       exclude-patterns:
-        - /actuator/**
-        - /swagger-ui/**
-        - /v3/api-docs/**
+        - /**/actuator/**
+        - /**/swagger-ui/**
+        - /**/v3/api-docs/**
+        - /**/v3/api-docs.yaml
