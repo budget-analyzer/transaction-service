@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # Script to generate Truist CSV files with random transactions
-# Usage: ./gen-truist-csv.sh [--clean] START_DATE END_DATE
+# Usage: ./gen-truist-csv.sh [--clean] [--output-dir DIR] START_DATE END_DATE
 # Date format: YYYY-MM-DD
 
 readonly SCRIPT_NAME=$(basename "$0")
@@ -45,18 +45,21 @@ readonly DEBIT_DESCRIPTIONS=(
 
 usage() {
     cat << EOF
-Usage: $SCRIPT_NAME [--clean] START_DATE END_DATE
+Usage: $SCRIPT_NAME [--clean] [--output-dir DIR] START_DATE END_DATE
 
 Generate a Truist CSV file with random transactions.
 
 Arguments:
-    --clean       Optional flag to use clean amounts (1, 10, 100, or 1000) for easier currency conversion
-    START_DATE    Start date in YYYY-MM-DD format
-    END_DATE      End date in YYYY-MM-DD format
+    --clean         Optional flag to use clean amounts (1, 10, 100, or 1000) for easier currency conversion
+    --output-dir    Optional directory to save the CSV file (defaults to current directory)
+    START_DATE      Start date in YYYY-MM-DD format
+    END_DATE        End date in YYYY-MM-DD format
 
 Examples:
     $SCRIPT_NAME 2024-01-01 2024-12-31
     $SCRIPT_NAME --clean 2024-01-01 2024-12-31
+    $SCRIPT_NAME --output-dir /tmp/csvs 2024-01-01 2024-12-31
+    $SCRIPT_NAME --clean --output-dir /tmp/csvs 2024-01-01 2024-12-31
 
 EOF
     exit 1
@@ -220,12 +223,31 @@ generate_transactions() {
 }
 
 main() {
-    # Parse optional --clean flag
+    # Parse optional flags
     local use_clean="false"
-    if [[ $# -ge 1 && "$1" == "--clean" ]]; then
-        use_clean="true"
-        shift
-    fi
+    local output_dir="."
+
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            --clean)
+                use_clean="true"
+                shift
+                ;;
+            --output-dir)
+                if [[ -z "${2:-}" ]]; then
+                    error_exit "--output-dir requires a directory argument"
+                fi
+                output_dir="$2"
+                shift 2
+                ;;
+            -*)
+                error_exit "Unknown option: $1"
+                ;;
+            *)
+                break
+                ;;
+        esac
+    done
 
     # Validate arguments
     if [[ $# -ne 2 ]]; then
@@ -234,6 +256,11 @@ main() {
 
     local start_date="$1"
     local end_date="$2"
+
+    # Validate and create output directory if needed
+    if [[ ! -d "$output_dir" ]]; then
+        mkdir -p "$output_dir" || error_exit "Failed to create directory: $output_dir"
+    fi
     
     # Validate date formats
     validate_date "$start_date"
@@ -253,7 +280,7 @@ main() {
     if [[ "$use_clean" == "true" ]]; then
         suffix="-clean"
     fi
-    local output_file="truist-${start_date}-to-${end_date}${suffix}.csv"
+    local output_file="${output_dir}/truist-${start_date}-to-${end_date}${suffix}.csv"
 
     # Generate CSV
     local clean_msg=""
