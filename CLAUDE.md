@@ -15,7 +15,7 @@ Manages financial transactions and CSV imports for the Budget Analyzer applicati
 
 **This service follows standard Budget Analyzer Spring Boot conventions.**
 
-See [@service-common/CLAUDE.md](../service-common/CLAUDE.md) and [@service-common/docs/](../service-common/docs/) for:
+See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md) and [@service-common/docs/](https://github.com/budget-analyzer/service-common/tree/main/docs) for:
 - Architecture layers (Controller → Service → Repository)
 - Naming conventions (`*Controller`, `*Service`, `*ServiceImpl`, `*Repository`)
 - Testing patterns (JUnit 5, TestContainers)
@@ -133,7 +133,7 @@ find src/main/java -name "*.java" -path "*/domain/*" -exec grep -l "^enum " {} \
 
 ### Package Structure
 
-**Standard Spring Boot layered architecture** - See [@service-common/CLAUDE.md](../service-common/CLAUDE.md)
+**Standard Spring Boot layered architecture** - See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md)
 
 **Service-specific packages:**
 - `repository/spec/` - JPA Specifications for advanced search
@@ -234,13 +234,13 @@ cd ../transaction-service
 
 ## Testing
 
-See [@service-common/docs/testing-patterns.md](../service-common/docs/testing-patterns.md) for testing conventions.
+See [@service-common/docs/testing-patterns.md](https://github.com/budget-analyzer/service-common/blob/main/docs/testing-patterns.md) for testing conventions.
 
 **Current state**: Minimal coverage, priority areas: CSV import, search filters, soft-delete behavior
 
 ## Notes for Claude Code
 
-**General guidance**: See [@service-common/CLAUDE.md](../service-common/CLAUDE.md) for code quality standards and build commands.
+**General guidance**: See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md) for code quality standards and build commands.
 
 **Service-specific reminders**:
 - CSV import is configuration-driven (YAML) - most banks need no code changes
