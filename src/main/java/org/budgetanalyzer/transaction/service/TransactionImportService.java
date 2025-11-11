@@ -28,17 +28,17 @@ public class TransactionImportService {
   /**
    * Constructs a new TransactionImportService.
    *
-   * @param appProperties the application properties containing CSV configuration
+   * @param transactionServiceProperties the application properties containing CSV configuration
    * @param csvParser the CSV parser utility
    * @param transactionService the transaction service for persisting transactions
    */
   public TransactionImportService(
-      TransactionServiceProperties appProperties,
+      TransactionServiceProperties transactionServiceProperties,
       CsvParser csvParser,
       TransactionService transactionService) {
     this.csvParser = csvParser;
     this.transactionService = transactionService;
-    this.transactionMapper = new CsvTransactionMapper(appProperties.csvConfigMap());
+    this.transactionMapper = new CsvTransactionMapper(transactionServiceProperties.csvConfigMap());
   }
 
   /**
