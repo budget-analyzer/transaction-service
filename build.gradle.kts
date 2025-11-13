@@ -1,11 +1,5 @@
 import org.springframework.boot.gradle.tasks.run.BootRun
 
-val jvmArgsList = listOf(
-    "--add-opens=java.base/java.nio=ALL-UNNAMED",
-    "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
-    "--enable-native-access=ALL-UNNAMED"
-)
-
 plugins {
     java
     checkstyle
@@ -64,6 +58,12 @@ checkstyle {
 tasks.named("check") {
     dependsOn("spotlessCheck")
 }
+
+val jvmArgsList = listOf(
+    "--add-opens=java.base/java.nio=ALL-UNNAMED",
+    "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
+    "--enable-native-access=ALL-UNNAMED"
+)
 
 tasks.withType<BootRun> {
     jvmArgs = jvmArgsList
