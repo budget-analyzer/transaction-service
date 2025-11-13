@@ -57,8 +57,22 @@ tasks.named("check") {
     dependsOn("spotlessCheck")
 }
 
+tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
+    jvmArgs = listOf(
+        "--add-opens=java.base/java.nio=ALL-UNNAMED",
+        "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
+        "--enable-native-access=ALL-UNNAMED"
+    )
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
+
+    jvmArgs = listOf(
+        "--add-opens=java.base/java.nio=ALL-UNNAMED",
+        "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED",
+        "--enable-native-access=ALL-UNNAMED"
+    )
 }
 
 tasks.withType<Javadoc> {
