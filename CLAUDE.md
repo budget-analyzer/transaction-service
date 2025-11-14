@@ -13,17 +13,20 @@ Manages financial transactions and CSV imports for the Budget Analyzer applicati
 
 ## Spring Boot Patterns
 
-**This service follows standard Budget Analyzer Spring Boot conventions.**
+**This service follows standard Budget Analyzer Spring Boot conventions.** Uses layered architecture (Controller → Service → Repository) with dependency injection, declarative transactions, and JPA for data access.
 
-See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md) and [@service-common/docs/](https://github.com/budget-analyzer/service-common/tree/main/docs) for:
-- Architecture layers (Controller → Service → Repository)
-- Naming conventions (`*Controller`, `*Service`, `*ServiceImpl`, `*Repository`)
-- Testing patterns (JUnit 5, TestContainers)
-- Error handling (exception hierarchy, `BusinessException` vs `InvalidRequestException`)
-- Logging conventions (SLF4J structured logging)
-- Dependency management (inherit from service-common parent POM)
-- Code quality standards (Spotless, Checkstyle, var usage, Javadoc)
-- Validation strategy (Bean Validation vs business validation)
+**When to consult service-common documentation:**
+- **Implementing new features** → Read [service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md) for architecture patterns
+- **Handling errors** → See [error-handling.md](https://github.com/budget-analyzer/service-common/blob/main/docs/error-handling.md) for exception hierarchy
+- **Writing tests** → See [testing-patterns.md](https://github.com/budget-analyzer/service-common/blob/main/docs/testing-patterns.md) for JUnit 5 + TestContainers conventions
+- **Code quality issues** → See [code-quality-standards.md](https://github.com/budget-analyzer/service-common/blob/main/docs/code-quality-standards.md) for Spotless, Checkstyle, var usage
+
+**Quick reference:**
+- Naming: `*Controller`, `*Service`, `*ServiceImpl`, `*Repository`
+- Exceptions: Use `BusinessException` for business rule violations, `InvalidRequestException` for bad input
+- Logging: SLF4J with structured logging (never log sensitive data)
+- Validation: Bean Validation (@Valid) for request DTOs, business validation in service layer
+- Dependencies: Inherit from service-common parent POM
 
 ## Service-Specific Patterns
 
@@ -133,11 +136,15 @@ find src/main/java -name "*.java" -path "*/domain/*" -exec grep -l "^enum " {} \
 
 ### Package Structure
 
-**Standard Spring Boot layered architecture** - See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md)
+**Standard Spring Boot layered architecture:** Controller → Service → Repository with domain entities and DTOs.
 
 **Service-specific packages:**
+- `api/` - REST controllers and request/response DTOs
+- `service/` - Business logic interfaces and implementations
+- `repository/` - JPA repositories and custom queries
 - `repository/spec/` - JPA Specifications for advanced search
 - `service/impl/` - Includes CSV mapping logic (`CsvTransactionMapper`)
+- `domain/` - JPA entities and enums
 
 **Discovery:**
 ```bash
@@ -234,15 +241,25 @@ cd ../transaction-service
 
 ## Testing
 
-See [@service-common/docs/testing-patterns.md](https://github.com/budget-analyzer/service-common/blob/main/docs/testing-patterns.md) for testing conventions.
+**Standard testing approach:** JUnit 5 with TestContainers for integration tests, MockMvc for controller tests, Mockito for unit tests.
+
+**When to consult testing documentation:**
+- **Writing new tests** → Read [testing-patterns.md](https://github.com/budget-analyzer/service-common/blob/main/docs/testing-patterns.md)
+- **Debugging test failures** → See testing-patterns.md for container lifecycle, test data setup
+
+**Quick reference:**
+- Test naming: `*Test` (unit), `*IntegrationTest` (with TestContainers)
+- Use `@SpringBootTest` + TestContainers for repository/service integration tests
+- Use `@WebMvcTest` for isolated controller tests
+- Test data: Use builders or test fixtures for domain objects
 
 **Current state**: Minimal coverage, priority areas: CSV import, search filters, soft-delete behavior
 
 ## Notes for Claude Code
 
-**General guidance**: See [@service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md) for code quality standards and build commands.
-
-**Service-specific reminders**:
+**Service-specific reminders:**
 - CSV import is configuration-driven (YAML) - most banks need no code changes
 - Always test CSV imports with real bank export samples
 - JPA Specifications enable dynamic search queries - see `repository/spec/`
+- Use soft-delete pattern - never hard delete transactions
+- For code quality standards and build commands, see [service-common/CLAUDE.md](https://github.com/budget-analyzer/service-common/blob/main/CLAUDE.md)
