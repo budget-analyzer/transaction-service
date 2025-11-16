@@ -42,7 +42,7 @@ spring:
     locations: classpath:db/migration
     validate-on-migrate: true
 
-budget-analyzer:
+budgetanalyzer:
   transaction-service:
 
     # ==================================================================

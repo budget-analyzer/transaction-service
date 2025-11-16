@@ -25,7 +25,7 @@ spring:
         await-termination: false
 
 # Minimal CSV config for test context - tests should mock/stub as needed
-budget-analyzer:
+budgetanalyzer:
   transaction-service:
     csv-config-map:
       test-bank:
